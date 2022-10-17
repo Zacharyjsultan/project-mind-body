@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import TextField from '@mui/material/TextField';
-import { completeTodo, createTodo, getTodos } from '../../services/todos';
+import { createTodo, getTodos } from '../../services/todos';
 import './Todos.css';
 
 import Button from '@mui/material/Button';

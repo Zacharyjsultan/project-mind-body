@@ -1,11 +1,10 @@
 import React from 'react';
-import { useContext } from 'react';
+
 import { useState } from 'react';
-import { UserContext } from '../../../context/UserContext';
+
 import { createJournalEntry } from '../../../services/journal';
 
 export default function Journal() {
-  const { user } = useContext(UserContext);
   const [grateful, setGrateful] = useState('');
   const [today, setToday] = useState('');
   const [affirmation, setAffirmation] = useState('');
@@ -13,7 +12,13 @@ export default function Journal() {
   const [improvement, setImprovement] = useState('');
 
   const handleSubmit = async () => {
-    const data = await createJournalEntry({ grateful }, { today }, { affirmation }, { occurrence }, { improvement }, { user });
+    const data = await createJournalEntry(
+      { grateful },
+      { today },
+      { affirmation },
+      { occurrence },
+      { improvement }
+    );
     console.log('data', data);
     // const todosArr = await getTodos();
     // setTodos(todosArr);

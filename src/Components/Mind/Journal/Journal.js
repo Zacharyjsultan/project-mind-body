@@ -1,8 +1,9 @@
 import React from 'react';
-
+import './Journal.css';
 import { useState } from 'react';
 
 import { createJournalEntry } from '../../../services/journal';
+import { NavLink } from 'react-router-dom';
 
 export default function Journal() {
   const [grateful, setGrateful] = useState('');
@@ -19,35 +20,59 @@ export default function Journal() {
       occurrence,
       improvement,
     });
-    console.log('data', data);
-    // const todosArr = await getTodos();
-    // setTodos(todosArr);
   };
 
   return (
     <>
-      <div>
+      <NavLink to="/pastjournals">Journal List</NavLink>
+
+      <div className="journal-entry">
         <h1>Journal</h1>
-        <label>I am grateful for...</label>
-        <input value={grateful} onChange={(e) => setGrateful(e.target.value)} />
+        <label className="journal-labels">I am grateful for...</label>
+        <input
+          className="journal-inputs"
+          value={grateful}
+          onChange={(e) => setGrateful(e.target.value)}
+        />
+
+        <p></p>
+        <div>
+          <label className="journal-labels">What would make today great?</label>
+          <input
+            className="journal-inputs"
+            value={today}
+            onChange={(e) => setToday(e.target.value)}
+          ></input>
+        </div>
+        <p></p>
+        <div>
+          <label className="journal-labels">Daily affirmation. I am...</label>
+          <input
+            className="journal-inputs"
+            value={affirmation}
+            onChange={(e) => setAffirmation(e.target.value)}
+          ></input>
+        </div>
+        <p></p>
+        <div>
+          <label className="journal-labels">Three amazing things that happened today...</label>
+          <input
+            className="journal-inputs"
+            value={occurrence}
+            onChange={(e) => setOccurrence(e.target.value)}
+          ></input>
+        </div>
+        <p></p>
+        <div>
+          <label className="journal-labels">How could I have made today even better?</label>
+          <input
+            className="journal-inputs"
+            value={improvement}
+            onChange={(e) => setImprovement(e.target.value)}
+          ></input>
+        </div>
+        <button onClick={handleSubmit}>Submit</button>
       </div>
-      <div>
-        <label>What would make today great?</label>
-        <input value={today} onChange={(e) => setToday(e.target.value)}></input>
-      </div>
-      <div>
-        <label>Daily affirmation. I am...</label>
-        <input value={affirmation} onChange={(e) => setAffirmation(e.target.value)}></input>
-      </div>
-      <div>
-        <label>Three amazing things that happened today...</label>
-        <input value={occurrence} onChange={(e) => setOccurrence(e.target.value)}></input>
-      </div>
-      <div>
-        <label>How could I have made today even better?</label>
-        <input value={improvement} onChange={(e) => setImprovement(e.target.value)}></input>
-      </div>
-      <button onClick={handleSubmit}>Submit</button>
     </>
   );
 }

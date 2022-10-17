@@ -1,0 +1,14 @@
+.journal-labels {
+  margin: 5px;
+  padding: 10px;
+}
+
+.journal-inputs {
+  height: 90px;
+  width: 320px;
+}
+
+.journal-entry {
+  border: black 3px dotted;
+  border-radius: 10px;
+}

@@ -13,3 +13,8 @@ export async function createJournalEntry(
     .insert(grateful, today, affirmation, occurrence, improvement, user_id);
   return checkError(resp);
 }
+
+export async function getJournals(id) {
+  const response = await client.from('journals').select('*').match({ id });
+  return checkError(response);
+}

@@ -31,7 +31,12 @@ export default function Todos() {
       </div>
       <div className="todo-list">
         {todos.map((todo) => {
-          return <input key={todo.id} type="radio" name={todo.todo}></input>;
+          return (
+            <div key={todo.id}>
+              <input type="checkbox"></input>
+              {todo.todo}
+            </div>
+          );
         })}
       </div>
     </div>

@@ -1,17 +1,8 @@
 import React from 'react';
-import useTodos from '../../hooks/useTodos';
 import './TodoCard.css';
-import { toggleComplete } from '../../services/todos';
 
-export default function TodoCard({ todo, id }) {
-  const { todos, setTodos } = useTodos();
 
-  const handleComplete = async () => {
-    const updatedTodo = await toggleComplete(todo);
-    setTodos((prevTodos) =>
-      prevTodos.map((prevTodo) => (prevTodo.id === id ? updatedTodo : prevTodo))
-    );
-  };
+export default function TodoCard({ todo, handleComplete }) {
 
   return (
     <div className="todo-card">

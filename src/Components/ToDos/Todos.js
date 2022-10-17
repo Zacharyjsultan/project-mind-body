@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import TextField from '@mui/material/TextField';
-import { completeTodo, createTodo, getTodos } from '../../services/todos';
+import { toggleComplete, createTodo, getTodos } from '../../services/todos';
 import './Todos.css';
 
 import Button from '@mui/material/Button';
@@ -15,6 +15,12 @@ export default function Todos({ todos, setTodos, id }) {
     setTodos(todosArr);
   };
 
+  const handleComplete = async () => {
+    const updatedTodo = await toggleComplete();
+    setTodos((prevTodos) =>
+      prevTodos.map((prevTodo) => (prevTodo.id === id ? updatedTodo : prevTodo))
+    );
+  };
   return (
     <div className="todo-main">
       <h2>Todos</h2>
@@ -34,7 +40,7 @@ export default function Todos({ todos, setTodos, id }) {
       </div>
       <div className="todo-list">
         {todos.map((todo) => (
-          <TodoCard key={todo.id} {...todo} />
+          <TodoCard key={todo.id} {...todo} handleComplete={handleComplete(todo)} />
         ))}
       </div>
     </div>

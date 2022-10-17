@@ -23,7 +23,7 @@ function useTodos() {
     };
     loadData();
   }, []);
-  return { todos, loading, error };
+  return { todos, loading, error, setTodos };
 }
 
 export default useTodos;

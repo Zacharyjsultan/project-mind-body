@@ -1,15 +1,16 @@
 import React, { useState } from 'react';
 import TextField from '@mui/material/TextField';
-import { createTodo } from '../../services/todos';
-import useTodos from '../../hooks/useTodos';
+import { createTodo, getTodos } from '../../services/todos';
+
 import Button from '@mui/material/Button';
 
-export default function Todos() {
-  const { todos } = useTodos();
+export default function Todos({ todos, setTodos }) {
   const [newTodo, setNewTodo] = useState('');
 
   const handleCreateTodo = async () => {
     await createTodo(newTodo);
+    const todosArr = await getTodos();
+    setTodos(todosArr);
   };
 
   return (

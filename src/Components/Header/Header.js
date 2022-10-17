@@ -1,17 +1,10 @@
 import React, { useContext } from 'react';
-import { UserContext } from '../../context/UserContext';
+import './Header.css';
 
 export default function Header() {
-  const { user, setUser } = useContext(UserContext);
-
-  const handleLogout = () => {
-    
-  }
-
   return (
-    <div>
+    <header>
       <h2>HEADER</h2>
-      <button onClick={handleLogout}>Log Out</button>
-    </div>
+    </header>
   );
 }

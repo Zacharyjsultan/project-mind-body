@@ -12,13 +12,13 @@ export default function Journal() {
   const [improvement, setImprovement] = useState('');
 
   const handleSubmit = async () => {
-    const data = await createJournalEntry(
-      { grateful },
-      { today },
-      { affirmation },
-      { occurrence },
-      { improvement }
-    );
+    const data = await createJournalEntry({
+      grateful,
+      today,
+      affirmation,
+      occurrence,
+      improvement,
+    });
     console.log('data', data);
     // const todosArr = await getTodos();
     // setTodos(todosArr);

@@ -10,6 +10,6 @@ export async function createJournalEntry(
 ) {
   const resp = await client
     .from('journals')
-    .insert({ grateful, today, affirmation, occurrence, improvement, user_id });
+    .insert(grateful, today, affirmation, occurrence, improvement, user_id);
   return checkError(resp);
 }

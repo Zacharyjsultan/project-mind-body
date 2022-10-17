@@ -9,10 +9,9 @@ function App() {
       <Header />
       <Switch>
         <Route path="/auth/:type" component={Auth} />
-        <Route path="/auth/:type" component={Auth} />
-        <Route path="*">
-          <Redirect to="/auth/sign-in" />
-        </Route>
+        {/* <Route path="*">
+        </Route> */}
+        <Route path="/" component={Auth}></Route>
       </Switch>
     </div>
   );

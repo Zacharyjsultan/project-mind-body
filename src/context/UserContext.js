@@ -1,3 +1,4 @@
+import { useContext } from 'react';
 import { createContext, useState } from 'react';
 import { getUser } from '../services/auth';
 
@@ -10,4 +11,12 @@ const UserProvider = ({ children }) => {
   return <UserContext.Provider value={{ user, setUser }}>{children}</UserContext.Provider>;
 };
 
-export { UserContext, UserProvider };
+const useUser = () => {
+  const context = useContext(UserContext);
+  if (context === undefined) {
+    throw new Error('useUser need to be within UserProvider');
+  }
+  return context;
+};
+
+export { UserContext, useUser, UserProvider };

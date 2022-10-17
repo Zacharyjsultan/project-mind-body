@@ -1,10 +1,9 @@
 import React from 'react';
-import useTodos from '../../hooks/useTodos';
+
 import './TodoCard.css';
-import { toggleComplete } from '../../services/todos';
+
 
 export default function TodoCard({ todo, handleComplete, id, complete }) {
-  const { todos, setTodos } = useTodos();
 
   return (
     <div className="todo-card">

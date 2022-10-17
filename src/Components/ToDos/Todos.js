@@ -1,18 +1,25 @@
 import React, { useState } from 'react';
 import TextField from '@mui/material/TextField';
-import { completeTodo, createTodo, getTodos } from '../../services/todos';
+import { toggleComplete, createTodo, getTodos } from '../../services/todos';
 import './Todos.css';
 
 import Button from '@mui/material/Button';
 import TodoCard from '../TodoCard/TodoCard';
 
-export default function Todos({ todos, setTodos, id }) {
+export default function Todos({ todos, setTodos }) {
   const [newTodo, setNewTodo] = useState('');
 
   const handleCreateTodo = async () => {
     await createTodo(newTodo);
     const todosArr = await getTodos();
     setTodos(todosArr);
+  };
+
+  const handleComplete = async (todo) => {
+    const updatedTodo = await toggleComplete(todo);
+    setTodos((prevTodos) =>
+      prevTodos.map((prevTodo) => (prevTodo.id === todo.id ? updatedTodo : prevTodo))
+    );
   };
 
   return (
@@ -34,7 +41,7 @@ export default function Todos({ todos, setTodos, id }) {
       </div>
       <div className="todo-list">
         {todos.map((todo) => (
-          <TodoCard key={todo.id} {...todo} />
+          <TodoCard key={todo.id} {...todo} handleComplete={handleComplete(todo)} />
         ))}
       </div>
     </div>

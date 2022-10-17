@@ -3,19 +3,12 @@ import useTodos from '../../hooks/useTodos';
 import './TodoCard.css';
 import { toggleComplete } from '../../services/todos';
 
-export default function TodoCard({ todo, id }) {
+export default function TodoCard({ todo, handleComplete }) {
   const { todos, setTodos } = useTodos();
-
-  const handleComplete = async () => {
-    const updatedTodo = await toggleComplete(todo);
-    setTodos((prevTodos) =>
-      prevTodos.map((prevTodo) => (prevTodo.id === id ? updatedTodo : prevTodo))
-    );
-  };
 
   return (
     <div className="todo-card">
-      <input type="checkbox" onChange={handleComplete} />
+      <input type="checkbox" onClick={() => handleComplete(todo)} />
       <h4>{todo}</h4>
     </div>
   );

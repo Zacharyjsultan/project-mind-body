@@ -11,3 +11,8 @@ export async function getTodos() {
 
   return checkError(resp);
 }
+
+export async function toggleComplete({ id }) {
+  const resp = await client.from('todos').update({ complete: true }).match({ id }).single();
+  return checkError(resp);
+}

@@ -1,7 +1,9 @@
 header {
-  background-color: aquamarine;
+  background-color: rgb(25, 26, 25);
+  color: rgb(164, 180, 148);
   display: flex;
   justify-content: center;
   align-items: center;
   height: 10vh;
+  font-family: 'Libre Baskerville', serif;
 }

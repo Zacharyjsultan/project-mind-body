@@ -1,6 +1,38 @@
 .productivity-main {
-  background-color: cadetblue;
+  background-color: rgb(216, 233, 168);
+  color: rgb(25, 26, 25);
   width: 17vw;
   height: 90vw;
   position: fixed;
+  display: flex;
+  flex-direction: column;
+}
+
+.pomodoro-section {
+  margin-top: 30vh;
+}
+
+.todo-section {
+  margin-top: 10vh;
+}
+
+.greeting {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Libre Baskerville', serif;
+  margin-top: 4vh;
+}
+
+.signout {
+  margin-top: 5vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2vh;
+  margin-right: 4vh;
+}
+
+.logout-icon {
+  height: 2vh;
 }

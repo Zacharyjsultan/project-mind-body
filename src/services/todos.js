@@ -12,7 +12,7 @@ export async function getTodos() {
   return checkError(resp);
 }
 
-export async function toggleComplete({ id, complete }) {
+export async function toggleComplete(id, complete) {
   const resp = await client.from('todos').update({ complete: !complete }).match({ id }).single();
   return checkError(resp);
 }

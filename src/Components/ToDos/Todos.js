@@ -15,10 +15,11 @@ export default function Todos({ todos, setTodos }) {
     setTodos(todosArr);
   };
 
-  const handleComplete = async (todo) => {
-    const updatedTodo = await toggleComplete(todo);
+  const handleComplete = async (id, complete) => {
+
+    const updatedTodo = await toggleComplete(id, complete);
     setTodos((prevTodos) =>
-      prevTodos.map((prevTodo) => (prevTodo.id === todo.id ? updatedTodo : prevTodo))
+      prevTodos.map((prevTodo) => (prevTodo.id === id ? updatedTodo : prevTodo))
     );
   };
 
@@ -41,7 +42,7 @@ export default function Todos({ todos, setTodos }) {
       </div>
       <div className="todo-list">
         {todos.map((todo) => (
-          <TodoCard key={todo.id} {...todo} handleComplete={handleComplete(todo)} />
+          <TodoCard key={todo.id} {...todo} handleComplete={handleComplete} />
         ))}
       </div>
     </div>

@@ -23,10 +23,15 @@ export default function Journal() {
   };
 
   return (
+
     <div>
       <NavLink className="journal-card" to="/pastjournals">
         Past Entries
       </NavLink>
+      <NavLink to="/journal/list">Journal List</NavLink>
+    </div>
+      
+
 
       <div className="journal-entry">
         <h1>Journal</h1>

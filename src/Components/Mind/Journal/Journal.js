@@ -23,64 +23,58 @@ export default function Journal() {
   };
 
   return (
-
     <div>
-      <NavLink className="journal-card" to="/pastjournals">
-        Past Entries
-      </NavLink>
-      <NavLink to="/journal/list">Journal List</NavLink>
-    </div>
-      
+      <div>
+        <NavLink className="journal-card" to="/pastjournals">
+          Past Entries
+        </NavLink>
+      </div>
 
-
-      <div className="journal-entry">
-        <h1>Journal</h1>
-        <label className="journal-labels">1. I am grateful for...</label>
-        <input
-          className="journal-inputs"
-          value={grateful}
-          onChange={(e) => setGrateful(e.target.value)}
-        />
-
-        <p></p>
-        <div>
-          <label className="journal-labels">2. What would make today great?</label>
-          <input
-            className="journal-inputs"
-            value={today}
-            onChange={(e) => setToday(e.target.value)}
-          ></input>
+      <div className="journal-container">
+        <div className="journal-title">
+          <h1>Journal</h1>
         </div>
-        <p></p>
-        <div>
-          <label className="journal-labels">3. Daily affirmation. I am...</label>
-          <input
-            className="journal-inputs"
-            value={affirmation}
-            onChange={(e) => setAffirmation(e.target.value)}
-          ></input>
+        <div className="journal-body">
+          <div className="prompts">
+            <label className="journal-labels">1. I am grateful for...</label>
+            <label className="journal-labels">2. What would make today great?</label>
+            <label className="journal-labels">3. Daily affirmation. I am...</label>
+            <label className="journal-labels">4. Three amazing things that happened today...</label>
+            <label className="journal-labels">5. How could I have made today even better?</label>
+          </div>
+          <div className="input-section">
+            <input
+              className="journal-inputs"
+              value={grateful}
+              onChange={(e) => setGrateful(e.target.value)}
+            />
+            <input
+              className="journal-inputs"
+              value={today}
+              onChange={(e) => setToday(e.target.value)}
+            ></input>
+            <input
+              className="journal-inputs"
+              value={affirmation}
+              onChange={(e) => setAffirmation(e.target.value)}
+            ></input>
+            <input
+              className="journal-inputs"
+              value={occurrence}
+              onChange={(e) => setOccurrence(e.target.value)}
+            ></input>
+            <input
+              className="journal-inputs"
+              value={improvement}
+              onChange={(e) => setImprovement(e.target.value)}
+            ></input>
+          </div>
         </div>
-        <p></p>
-        <div>
-          <label className="journal-labels">4. Three amazing things that happened today...</label>
-          <input
-            className="journal-inputs"
-            value={occurrence}
-            onChange={(e) => setOccurrence(e.target.value)}
-          ></input>
+        <div className="btn-container">
+          <button className="submit" onClick={handleSubmit}>
+            Submit
+          </button>
         </div>
-        <p></p>
-        <div>
-          <label className="journal-labels">5. How could I have made today even better?</label>
-          <input
-            className="journal-inputs"
-            value={improvement}
-            onChange={(e) => setImprovement(e.target.value)}
-          ></input>
-        </div>
-        <button className="submit" onClick={handleSubmit}>
-          Submit
-        </button>
       </div>
     </div>
   );

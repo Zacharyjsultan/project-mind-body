@@ -24,11 +24,13 @@ export default function Home() {
         <NavLink to="/home/mind">Mind</NavLink>
         <NavLink to="/home/body">Body</NavLink>
       </div>
-      <Switch>
-        <Route exact path="/home" component={Landing} />
-        <Route path="/home/mind" component={Mind} />
-        <Route path="/home/body" component={Body} />
-      </Switch>
+      <div className="home-components">
+        <Switch>
+          <Route exact path="/home" component={Landing} />
+          <Route path="/home/mind" component={Mind} />
+          <Route path="/home/body" component={Body} />
+        </Switch>
+      </div>
     </div>
   );
 }

@@ -5,29 +5,33 @@ import './Todos.css';
 
 import Button from '@mui/material/Button';
 import TodoCard from '../TodoCard/TodoCard';
+// import useTodos from '../../hooks/useTodos';
 
 export default function Todos({ todos, setTodos }) {
-  const [newTodo, setNewTodo] = useState('');
+  const [description, setDescription] = useState('');
 
   const handleCreateTodo = async () => {
-    await createTodo(newTodo);
+    await createTodo(description);
     const todosArr = await getTodos();
     setTodos(todosArr);
   };
 
   const handleComplete = async (id, complete) => {
-
     const updatedTodo = await toggleComplete(id, complete);
     setTodos((prevTodos) =>
       prevTodos.map((prevTodo) => (prevTodo.id === id ? updatedTodo : prevTodo))
     );
   };
 
-  const handleDelete = async (id, complete) => {
-    await deleteTodo(id, complete);
-    const newTodos = todos.filter((oldTodo) => id !== oldTodo.id);
-    setTodos(newTodos);
-
+  const handleDelete = async () => {
+    try {
+      await deleteTodo(todos);
+      setTodos(await getTodos());
+      setDescription('');
+    } catch (e) {
+      // eslint-disable-next-line no-console
+      console.error(e.message);
+    }
   };
 
   return (
@@ -40,8 +44,8 @@ export default function Todos({ todos, setTodos }) {
           variant="outlined"
           className="title"
           margin="dense"
-          value={newTodo}
-          onChange={(e) => setNewTodo(e.target.value)}
+          value={description}
+          onChange={(e) => setDescription(e.target.value)}
         ></TextField>
         <Button variant="outlined" className="add-todo-btn" onClick={handleCreateTodo}>
           Add todo
@@ -52,7 +56,13 @@ export default function Todos({ todos, setTodos }) {
           <TodoCard key={todo.id} {...todo} handleComplete={handleComplete} />
         ))}
       </div>
-      <button className='delete-button' onClick={handleDelete}>Delete</button>
+      <div>
+        {todos.some((todo) => todo.complete) && (
+          <button className="tasks-delete" onClick={handleDelete}>
+            DELETE
+          </button>
+        )}
+      </div>
     </div>
   );
 }

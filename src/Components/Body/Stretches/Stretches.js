@@ -10,7 +10,8 @@ export default function Stretches() {
   console.log('search', search);
   useEffect(() => {
     const fetchData = async () => {
-      const resp = await fetch('/.netlify/functions/index.js');
+      const resp = await fetch('/.netlify/functions/fetch-stretch');
+      console.log(resp.body);
       const data = await resp.json();
       setStretches(data);
     };
@@ -18,7 +19,7 @@ export default function Stretches() {
   }, []);
 
   const searchStretches = async () => {
-    const resp = await fetchStretches(`/.netlify/functions/stretches?muscle={search}`);
+    const resp = await fetchStretches(search);
     // const data = await resp.json();
     setStretches(resp);
   };

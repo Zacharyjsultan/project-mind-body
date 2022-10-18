@@ -20,13 +20,14 @@ exports.handler = async (event) => {
       }
     );
     const data = await resp.json();
- 
+    console.log(data);
     return {
       statusCode: 200,
       body: JSON.stringify(data.instructions),
     };
   } catch (e) {
-    // es-lint-disable-next-line no-console
+   
+    // eslint-disable-next-line no-console
     console.error(e);
     return {
       statusCode: 500,

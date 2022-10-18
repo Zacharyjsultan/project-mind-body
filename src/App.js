@@ -14,14 +14,14 @@ function App() {
   return (
     <div className="App">
       <Header />
-      {user &&
-      <Productivity />}
+      {user && <Productivity />}
       <Switch>
         <Route path="/auth/:type" component={Auth} />
         <Route path="/home" component={Home} />
         <Route path="/pastjournals" component={JournalList} />
-        <Route exact path="/" ><Redirect to="/auth/sign-in"/></Route>
-
+        <Route exact path="/">
+          <Redirect to="/auth/sign-in" />
+        </Route>
       </Switch>
     </div>
   );

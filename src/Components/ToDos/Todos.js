@@ -1,16 +1,10 @@
 import React, { useState } from 'react';
 import TextField from '@mui/material/TextField';
-import { createTodo, getTodos } from '../../services/todos';
 import { toggleComplete, createTodo, getTodos, deleteTodo } from '../../services/todos';
 import './Todos.css';
-
-// import Button from '@mui/material/Button';
 import TodoCard from '../TodoCard/TodoCard';
-// import useTodos from '../../hooks/useTodos';
 
 export default function Todos({ todos, setTodos }) {
-
-  const [newTodo, setNewTodo] = useState('');
   const [description, setDescription] = useState('');
 
   const handleCreateTodo = async () => {
@@ -51,9 +45,6 @@ export default function Todos({ todos, setTodos }) {
             value={description}
             onChange={(e) => setDescription(e.target.value)}
           ></TextField>
-          {/* <Button variant="outlined" className="add-todo-btn" >
-            Add todo
-          </Button> */}
         </div>
       </form>
 

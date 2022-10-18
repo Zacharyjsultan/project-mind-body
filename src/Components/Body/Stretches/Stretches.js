@@ -10,9 +10,10 @@ export default function Stretches() {
   console.log('search', search);
   useEffect(() => {
     const fetchData = async () => {
-      const resp = await fetch('/.netlify/functions/fetch-stretch');
-      console.log(resp.body);
-      const data = await resp.json();
+      const data = await fetchStretches();
+      // const resp = await fetch('/.netlify/functions/fetch-stretch');
+      // console.log(resp.body);
+      // const data = await resp.json();
       setStretches(data);
     };
     fetchData();

@@ -12,6 +12,7 @@ export default function TodoCard({ todo }) {
       prevTodos.map((prevTodo) => (prevTodo.id === todo.id ? updatedTodo : prevTodo))
     );
   };
+  //eslint-disable-next-line no-console
   console.log(handleComplete);
 
   return (

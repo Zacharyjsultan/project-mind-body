@@ -13,7 +13,7 @@ export default function Journal() {
   const [improvement, setImprovement] = useState('');
 
   const handleSubmit = async () => {
-    const data = await createJournalEntry({
+    await createJournalEntry({
       grateful,
       today,
       affirmation,

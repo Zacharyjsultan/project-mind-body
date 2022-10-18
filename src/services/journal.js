@@ -14,7 +14,7 @@ export async function createJournalEntry(
   return checkError(resp);
 }
 
-export async function getJournals(id) {
-  const response = await client.from('journals').select('*').match({ id });
+export async function getJournals(user_id) {
+  const response = await client.from('journals').select('*').match({ user_id });
   return checkError(response);
 }

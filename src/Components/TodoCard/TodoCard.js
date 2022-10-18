@@ -4,7 +4,7 @@ import './TodoCard.css';
 import { toggleComplete } from '../../services/todos';
 
 export default function TodoCard({ todo }) {
-  const { todos, setTodos } = useTodos();
+  const { setTodos } = useTodos();
 
   const handleComplete = async (todo) => {
     const updatedTodo = await toggleComplete(todo);
@@ -12,6 +12,7 @@ export default function TodoCard({ todo }) {
       prevTodos.map((prevTodo) => (prevTodo.id === todo.id ? updatedTodo : prevTodo))
     );
   };
+  console.log(handleComplete);
 
   return (
     <div className="todo-card">
@@ -20,3 +21,5 @@ export default function TodoCard({ todo }) {
     </div>
   );
 }
+
+

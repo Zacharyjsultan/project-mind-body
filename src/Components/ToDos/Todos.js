@@ -6,7 +6,7 @@ import './Todos.css';
 import Button from '@mui/material/Button';
 import TodoCard from '../TodoCard/TodoCard';
 
-export default function Todos({ todos, setTodos, id }) {
+export default function Todos({ todos, setTodos }) {
   const [newTodo, setNewTodo] = useState('');
 
   const handleCreateTodo = async () => {

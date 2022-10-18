@@ -1,4 +1,5 @@
 import React from 'react';
+import './JournalCard.css';
 
 export default function JournalCard({ grateful, today, affirmation, occurrence, improvement }) {
   return (

@@ -26,9 +26,9 @@ h1 {
   width: 30em;
   font-size: 10px;
   background: url(http://i.stack.imgur.com/ynxjD.png) repeat-y;
-  box-shadow: -11px 10px 5px -7px rgba(0, 0, 0, 0.36);
-  -webkit-box-shadow: -11px 10px 5px -7px rgba(0, 0, 0, 0.36);
-  -moz-box-shadow: -11px 10px 5px -7px rgba(0, 0, 0, 0.36);
+  box-shadow: -7px 10px 5px -4px rgba(0, 0, 0, 0.69);
+  -webkit-box-shadow: -7px 10px 5px -4px rgba(0, 0, 0, 0.69);
+  -moz-box-shadow: -7px 10px 5px -4px rgba(0, 0, 0, 0.69);
 }
 
 .journal-entry {
@@ -80,4 +80,5 @@ h1 {
   transition: all 0.2s;
   font-size: large;
   opacity: 0.84;
+  cursor: pointer;
 }

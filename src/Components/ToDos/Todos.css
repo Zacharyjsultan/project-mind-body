@@ -1,0 +1,25 @@
+.todo-list {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 5vh;
+  font-family: 'Libre Baskerville', serif;
+}
+.todo-input {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2vh;
+}
+
+.todo-main {
+  gap: 5vh;
+  font-family: 'Libre Baskerville', serif;
+}
+.add-todo-btn {
+  background-color: antiquewhite;
+  width: 6vh;
+  font-family: 'Libre Baskerville', serif;
+}

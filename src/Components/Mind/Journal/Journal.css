@@ -1,0 +1,22 @@
+.journal-labels {
+  margin: 5px;
+  padding: 10px;
+}
+
+.journal-inputs {
+  height: 90px;
+  width: 320px;
+  box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
+  -webkit-box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
+}
+
+.journal-entry {
+  border: black 3px solid;
+  display: block;
+  border-radius: 10px;
+  padding-bottom: 20px;
+  box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
+  -webkit-box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
+}

@@ -1,6 +1,9 @@
 import React from 'react';
+import Mind from '../Mind/Mind';
 import './Home.css';
 
 export default function Home() {
-  return <div className="home-main">Home</div>;
+  return <div className="home-main">
+    <Mind />
+  </div>;
 }

@@ -11,7 +11,6 @@ import { Redirect } from 'react-router-dom';
 export default function Productivity() {
   const { user, setUser } = useContext(UserContext);
   const { todos, setTodos } = useTodos();
-  console.log(todos);
 
   const handleLogout = async () => {
     await signOut();

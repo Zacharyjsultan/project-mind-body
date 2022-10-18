@@ -9,13 +9,17 @@ import { UserContext } from '../../context/UserContext';
 export default function Todos({ todos, setTodos }) {
   const [description, setDescription] = useState('');
   const { user } = useContext(UserContext);
-  console.log(user.id);
+
+  const owner = user.id;
+  console.log(owner);
 
   const handleCreateTodo = async () => {
-    await createTodo(description, user.id);
-    const todosArr = await getTodos(user.id);
-    console.log('arrr', todosArr);
-    setTodos(todosArr);
+    await createTodo(description);
+    const todosArr = await getTodos();
+
+    const userTodos = todosArr.filter((todo) => owner === todo.user_id);
+    console.log('user', userTodos);
+    setTodos(userTodos);
   };
 
   const handleComplete = async (id, complete) => {

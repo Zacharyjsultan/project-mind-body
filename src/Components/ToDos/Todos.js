@@ -11,14 +11,13 @@ export default function Todos({ todos, setTodos }) {
   const { user } = useContext(UserContext);
 
   const owner = user.id;
-  console.log(owner);
 
   const handleCreateTodo = async () => {
     await createTodo(description);
     const todosArr = await getTodos();
 
     const userTodos = todosArr.filter((todo) => owner === todo.user_id);
-    console.log('user', userTodos);
+
     setTodos(userTodos);
   };
 

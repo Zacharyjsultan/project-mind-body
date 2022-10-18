@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Shalimar&display=swap');
 
 .journal-labels {
-  margin: 1em;
+  margin: 2em;
   padding: 0.4em;
   color: #ffffff;
   background-color: #000000;
@@ -29,6 +29,7 @@ h1 {
   box-shadow: -7px 10px 5px -4px rgba(0, 0, 0, 0.69);
   -webkit-box-shadow: -7px 10px 5px -4px rgba(0, 0, 0, 0.69);
   -moz-box-shadow: -7px 10px 5px -4px rgba(0, 0, 0, 0.69);
+  font-family: 'Shalimar', cursive;
 }
 
 .journal-entry {
@@ -51,10 +52,9 @@ h1 {
 .journal-card {
   display: inline-block;
   position: static;
-
-  padding: 0.4em 1.2em;
+  padding: 0.3em 1em;
   margin: 2em;
-  border-radius: 2em;
+  border-radius: 1em;
   box-sizing: border-box;
   text-decoration: underline;
   font-family: 'Roboto', sans-serif;
@@ -62,7 +62,7 @@ h1 {
   color: #000000;
   background-color: #ffffff;
   text-align: center;
-  transition: all 0.2s;
+  transition: all 0.5s;
 }
 
 .submit {
@@ -81,4 +81,14 @@ h1 {
   font-size: large;
   opacity: 0.84;
   cursor: pointer;
+}
+button:active {
+  background: #e5e5e5;
+  -webkit-box-shadow: inset 0px 0px 588px #c1c1c1;
+  -moz-box-shadow: inset 0px 0px 588px #c1c1c1;
+  box-shadow: inset 0px 0px 588px #c1c1c1;
+  outline: none;
+}
+a:hover {
+  color: blue;
 }

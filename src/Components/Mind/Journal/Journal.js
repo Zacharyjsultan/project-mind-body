@@ -23,12 +23,19 @@ export default function Journal() {
   };
 
   return (
-    <>
+
+    <div>
+      <NavLink className="journal-card" to="/pastjournals">
+        Past Entries
+      </NavLink>
       <NavLink to="/journal/list">Journal List</NavLink>
+    </div>
+      
+
 
       <div className="journal-entry">
         <h1>Journal</h1>
-        <label className="journal-labels">I am grateful for...</label>
+        <label className="journal-labels">1. I am grateful for...</label>
         <input
           className="journal-inputs"
           value={grateful}
@@ -37,7 +44,7 @@ export default function Journal() {
 
         <p></p>
         <div>
-          <label className="journal-labels">What would make today great?</label>
+          <label className="journal-labels">2. What would make today great?</label>
           <input
             className="journal-inputs"
             value={today}
@@ -46,7 +53,7 @@ export default function Journal() {
         </div>
         <p></p>
         <div>
-          <label className="journal-labels">Daily affirmation. I am...</label>
+          <label className="journal-labels">3. Daily affirmation. I am...</label>
           <input
             className="journal-inputs"
             value={affirmation}
@@ -55,7 +62,7 @@ export default function Journal() {
         </div>
         <p></p>
         <div>
-          <label className="journal-labels">Three amazing things that happened today...</label>
+          <label className="journal-labels">4. Three amazing things that happened today...</label>
           <input
             className="journal-inputs"
             value={occurrence}
@@ -64,15 +71,17 @@ export default function Journal() {
         </div>
         <p></p>
         <div>
-          <label className="journal-labels">How could I have made today even better?</label>
+          <label className="journal-labels">5. How could I have made today even better?</label>
           <input
             className="journal-inputs"
             value={improvement}
             onChange={(e) => setImprovement(e.target.value)}
           ></input>
         </div>
-        <button onClick={handleSubmit}>Submit</button>
+        <button className="submit" onClick={handleSubmit}>
+          Submit
+        </button>
       </div>
-    </>
+    </div>
   );
 }

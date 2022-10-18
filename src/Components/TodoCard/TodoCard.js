@@ -15,10 +15,15 @@ export default function TodoCard({ todo }) {
   //eslint-disable-next-line no-console
   console.log(handleComplete);
 
+
+import './TodoCard.css';
+
+
+export default function TodoCard({ description, handleComplete, id, complete }) {
   return (
     <div className="todo-card">
-      <input type="checkbox" />
-      <h4>{todo}</h4>
+      <input type="checkbox" onClick={() => handleComplete(id, complete)} />
+      <h4>{description}</h4>
     </div>
   );
 }

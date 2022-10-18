@@ -2,10 +2,8 @@ import { Redirect, Route, Switch } from 'react-router-dom';
 import './App.css';
 import Auth from './Components/Auth/Auth';
 import Home from './Components/Home/Home';
-import Mind from './Components/Mind/Mind';
 
 function App() {
-
   return (
     <div className="App">
       <Switch>

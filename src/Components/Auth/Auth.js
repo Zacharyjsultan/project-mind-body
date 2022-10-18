@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { NavLink, Redirect, useParams } from 'react-router-dom';
 import { authUser } from '../../services/auth';
 import { useUser } from '../../context/UserContext';
+import Header from '../Header/Header';
 
 export default function Auth() {
   const { type } = useParams();
@@ -22,6 +23,7 @@ export default function Auth() {
   }
   return (
     <div>
+      <Header />
       <NavLink to="/auth/sign-in">
         <button>Sign in</button>
       </NavLink>

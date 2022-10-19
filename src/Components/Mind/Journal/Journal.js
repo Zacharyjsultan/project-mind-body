@@ -25,7 +25,7 @@ export default function Journal() {
   return (
     <div>
       <div>
-        <NavLink className="journal-card" to="/pastjournals">
+        <NavLink className="journal-card" to="/home/journal/list">
           Past Entries
         </NavLink>
       </div>

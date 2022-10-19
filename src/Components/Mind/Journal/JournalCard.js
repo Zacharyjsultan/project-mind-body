@@ -4,8 +4,7 @@ import './JournalCard.css';
 export default function JournalCard({ grateful, today, affirmation, occurrence, improvement }) {
   return (
     <div className="main">
-    
-      <div className="journal-card">
+      <div className="journal-cards">
         <p>I am grateful for: {grateful}</p>
         <p>What would make today great? {today}</p>
         <p>Daily affirmation. I am {affirmation}</p>

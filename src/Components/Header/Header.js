@@ -19,6 +19,9 @@ export default function Header() {
         <NavLink to="/home/body">
           <Button variant="outlined">Body</Button>
         </NavLink>
+        <NavLink to="/home/creators">
+          <Button variant="outlined">Creators</Button>
+        </NavLink>
       </div>
     </header>
   );

@@ -1,22 +1,117 @@
+@import url('https://fonts.googleapis.com/css2?family=Shalimar&display=swap');
+
 .journal-labels {
-  margin: 5px;
-  padding: 10px;
+  margin: 2em;
+  padding: 0.4em;
+  color: #ffffff;
+  background-color: #000000;
+  opacity: 0.8;
+  margin-top: 5vh;
 }
 
-.journal-inputs {
-  height: 90px;
-  width: 320px;
-  box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
-  -webkit-box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
-  -moz-box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
-}
-
-.journal-entry {
-  border: black 3px solid;
+h1 {
+  font-weight: bolder;
+  text-decoration: underline;
+  color: white;
+  background-color: #000000;
+  opacity: 0.81;
   display: block;
-  border-radius: 10px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 7em;
+  padding: 0.4em;
+  border-radius: 80px;
+}
+.journal-inputs {
+  height: 10em;
+  width: 30em;
+  margin-top: 2vh;
+  font-size: 10px;
+  background: url(http://i.stack.imgur.com/ynxjD.png) repeat-y;
+  box-shadow: -7px 10px 5px -4px rgba(0, 0, 0, 0.69);
+  -webkit-box-shadow: -7px 10px 5px -4px rgba(0, 0, 0, 0.69);
+  -moz-box-shadow: -7px 10px 5px -4px rgba(0, 0, 0, 0.69);
+  font-family: 'Shalimar', cursive;
+}
+
+.journal-container {
+  margin-left: 10vh;
+  border: #0ea800 3px solid;
+  background-image: url('backgroundimg101.jpeg');
+  display: grid;
+  grid-template-rows: 2fr 8fr 1fr;
+  border-radius: 80px;
   padding-bottom: 20px;
-  box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
-  -webkit-box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
-  -moz-box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
+  background-color: rgb(244, 238, 229);
+  align-items: center;
+  box-shadow: -11px 10px 5px -7px rgba(0, 0, 0, 0.36);
+  -webkit-box-shadow: -11px 10px 5px -7px rgba(0, 0, 0, 0.36);
+  -moz-box-shadow: -11px 10px 5px -7px rgba(0, 0, 0, 0.36);
+  font-weight: bold;
+  height: 75vh;
+  margin-left: 10em;
+  margin-right: 10em;
+}
+
+.journal-card {
+  display: inline-block;
+  position: static;
+  padding: 0.3em 1em;
+  margin: 2em;
+  border-radius: 1em;
+  box-sizing: border-box;
+  text-decoration: underline;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 350;
+  color: #000000;
+  background-color: #ffffff;
+  text-align: center;
+  transition: all 0.5s;
+}
+
+.submit {
+  display: inline-block;
+  padding: 0.5em 1.2em;
+  border: 0.1em solid #096200;
+  margin: 2em;
+  border-radius: 0.12em;
+  box-sizing: border-box;
+  text-decoration: underline;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+  color: #000000;
+  text-align: center;
+  transition: all 0.2s;
+  font-size: large;
+  opacity: 0.84;
+  cursor: pointer;
+}
+button:active {
+  background: #e5e5e5;
+  -webkit-box-shadow: inset 0px 0px 588px #c1c1c1;
+  -moz-box-shadow: inset 0px 0px 588px #c1c1c1;
+  box-shadow: inset 0px 0px 588px #c1c1c1;
+  outline: none;
+}
+a:hover {
+  color: blue;
+}
+
+.journal-body {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.prompts {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.input-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }

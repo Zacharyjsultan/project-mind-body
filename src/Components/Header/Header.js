@@ -1,12 +1,25 @@
 import React from 'react';
 import './Header.css';
+import { NavLink } from 'react-router-dom';
+import { Button } from '@mui/material';
 
 export default function Header() {
   // eslint-disable-next-line no-console
 
   return (
     <header>
-      <h2>To-dos Amigos</h2>
+      <div className="header-title">
+        <h2>Desk Jockey</h2>
+      </div>
+
+      <div className="nav-links">
+        <NavLink to="/home/mind">
+          <Button variant="outlined">Mind</Button>
+        </NavLink>
+        <NavLink to="/home/body">
+          <Button variant="outlined">Body</Button>
+        </NavLink>
+      </div>
     </header>
   );
 }

@@ -4,9 +4,9 @@
   justify-content: center;
   align-items: center;
   margin: 5em;
-  background-color: rgb(91, 191, 101);
+  background-image: url('TODOS.png');
   border-radius: 3em;
-  border: 2em solid black;
+  border: 1em solid black;
 }
 
 .creators {
@@ -14,20 +14,17 @@
   display: flex;
   align-items: center;
   color: rgb(0, 0, 0);
-  margin: 5em;
-  padding: 5em;
+  margin: 6em;
+  padding: 7em;
 }
 
 .image {
   width: 10vw;
   margin: auto;
+  margin-top: 1.3343523432em;
   box-shadow: -11px 10px 5px -7px rgba(0, 0, 0, 0.36);
   -webkit-box-shadow: -11px 10px 5px -7px rgba(0, 0, 0, 0.36);
   -moz-box-shadow: -11px 10px 5px -7px rgba(0, 0, 0, 0.36);
-}
-
-.title {
-  padding: 1em;
 }
 
 .social-icon-link {

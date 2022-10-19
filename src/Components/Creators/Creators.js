@@ -6,11 +6,9 @@ export default function Creators() {
   return (
     <div>
       <div className="creators-container">
-        <h2 className="title">GODS OF OUR OWN DOMAIN</h2>
         <div className="creators">
           <p className="andrew">
             <img className="image" src={require('./andrew.jpg')} />
-            
             <p>Andrew</p>
             <Link
               className="social-icon-link github"
@@ -34,7 +32,6 @@ export default function Creators() {
           </p>
           <p className="zach">
             <img className="image" src={require('./zatchery.JPG')} />
-            
             <p>Zach</p>
             <Link
               className="social-icon-link github"
@@ -66,9 +63,9 @@ export default function Creators() {
               aria-label="Github"
             >
               <i className="fa fa-github"></i>
-            Github
+              Github
             </Link>
-          &
+            &
             <Link
               className="social-icon-link github"
               to={{ pathname: 'https://www.linkedin.com/in/charles-crabtree/' }}
@@ -76,7 +73,7 @@ export default function Creators() {
               aria-label="LinkedIn"
             >
               <i className="fab fa-github" />
-            LinkedIn
+              LinkedIn
             </Link>
           </p>
           <p className="kyle">
@@ -89,9 +86,9 @@ export default function Creators() {
               aria-label="Github"
             >
               <i className="fab fa-github" />
-            Github
+              Github
             </Link>
-          &
+            &
             <Link
               className="social-icon-link github"
               to={{ pathname: 'https://www.linkedin.com/in/kyle-mccall/' }}
@@ -99,7 +96,7 @@ export default function Creators() {
               aria-label="LinkedIn"
             >
               <i className="fab fa-github" />
-            LinkedIn
+              LinkedIn
             </Link>
           </p>
         </div>

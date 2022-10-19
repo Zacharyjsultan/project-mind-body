@@ -11,6 +11,7 @@ export default function Creators() {
             https://www.linkedin.com/in/andrewjamesboyle/ https://github.com/andrewjamesboyle
           </p>
           <p className="zach">
+            <img src={require('./zatchery.jpg')} />
             Zach https://www.linkedin.com/in/zachary-sultan/ https://github.com/Zacharyjsultan
           </p>
           <p className="charlie">

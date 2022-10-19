@@ -3,10 +3,10 @@ import { NavLink, Redirect, Route, Switch } from 'react-router-dom';
 import { UserContext } from '../../context/UserContext';
 import { Button } from '@mui/material';
 import Header from '../Header/Header';
-// import Landing from '../Landing/Landing';
+
 import Journal from '../Mind/Journal/Journal';
 import JournalList from '../Mind/Journal/JournalList';
-// import Meditation from '../Mind/Meditation/Meditation';
+
 import Body from '../Body/Body';
 
 import Mind from '../Mind/Mind';
@@ -24,14 +24,7 @@ export default function Home() {
     <div className="home-main">
       <Header />
       <Productivity />
-      <div className="nav-links">
-        <NavLink to="/home/mind">
-          <Button variant="outlined">Mind</Button>
-        </NavLink>
-        <NavLink to="/home/body">
-          <Button variant="outlined">Body</Button>
-        </NavLink>
-      </div>
+
       <div className="home-components">
         <Switch>
           {/* <Route exact path="/home" component={Landing} /> */}

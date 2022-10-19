@@ -10,8 +10,8 @@ import Landing from './Components/Landing/Landing';
 function App() {
   return (
     <div className="App">
-      <Header />
-      <Body />
+      {/* <Header /> */}
+      {/* <Body /> */}
       <Switch>
         <Route path="/auth/:type" component={Auth} />
         <Route path="/home/:component" component={Home} />

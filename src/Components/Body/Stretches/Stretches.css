@@ -1,0 +1,27 @@
+.stretches-body {
+  display: grid;
+  grid-template-rows: 2fr 10fr;
+  overflow-y: scroll;
+}
+
+.stretches-input {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 4vh;
+  gap: 2vh;
+}
+
+.stretch-search {
+  width: 40%;
+}
+
+.stretch-btn {
+  width: 15%;
+}
+
+.stretches-container {
+  margin-left: 5vh;
+  margin-right: 5vh;
+}

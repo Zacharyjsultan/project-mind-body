@@ -1,8 +1,9 @@
 .productivity-main {
   background-color: rgb(57, 91, 100);
   color: rgb(231, 246, 242);
-  width: 15vw;
-  height: 90vh;
+  width: 12vw;
+  height: 89.9vh;
+  margin-top: 0.1vh;
   min-height: 80vh;
   position: absolute;
   flex-shrink: 0;

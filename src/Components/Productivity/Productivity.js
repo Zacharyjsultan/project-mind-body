@@ -7,10 +7,21 @@ import Pomodoro from '../Pomodoro/Pomodoro';
 import { Button } from '@mui/material';
 import { signOut } from '../../services/auth';
 import { Redirect } from 'react-router-dom';
+import useProfile from '../../hooks/useProfile';
 
 export default function Productivity() {
   const { user, setUser } = useContext(UserContext);
-  const { todos, setTodos } = useTodos();
+  const {
+    todos,
+    setTodos,
+    loading,
+    handleCreateTodo,
+    description,
+    setDescription,
+    handleComplete,
+    handleDelete,
+  } = useTodos();
+  const { profile } = useProfile();
 
   const handleLogout = async () => {
     await signOut();
@@ -18,19 +29,32 @@ export default function Productivity() {
     return <Redirect to="/auth/sign-in" />;
   };
 
+  if (loading) {
+    return <h1>Loading</h1>;
+  }
+
   return (
     <div className="productivity-main">
       <div className="greeting">
-        <div>Hello {user.email}</div>
+        <div>Hello {profile.full_name}</div>
       </div>
       <div className="todo-section">
-        <Todos todos={todos} setTodos={setTodos} />
+        <Todos
+          todos={todos}
+          setTodos={setTodos}
+          loading={loading}
+          handleCreateTodo={handleCreateTodo}
+          description={description}
+          setDescription={setDescription}
+          handleComplete={handleComplete}
+          handleDelete={handleDelete}
+        />
       </div>
       <div className="pomodoro-section">
         <Pomodoro />
       </div>
       <div className="signout">
-        {/* <img src={require('./logout.png')} className="logout-icon" /> */}
+        <img src={require('./logout.png')} className="logout-icon" />
         <Button variant="outlined" className="signout-btn" onClick={handleLogout}>
           Signout
         </Button>

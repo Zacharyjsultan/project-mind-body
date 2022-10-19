@@ -1,0 +1,35 @@
+.mind-main {
+  height: 88vh;
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+}
+
+.journal-path {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid black;
+}
+
+.meditation-path {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid black;
+}
+
+.mind-links {
+  text-decoration: none;
+  margin: 4vh;
+}
+
+.journal-redirect {
+  display: flex;
+  flex-direction: column;
+}
+
+.meditation-img {
+  height: 30vh;
+}

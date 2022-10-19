@@ -8,4 +8,11 @@
 .nav-links {
   display: flex;
   justify-content: space-around;
+  align-items: center;
+  margin-left: 15vw;
+}
+
+.home-components {
+  width: 85vw;
+  margin-left: 15vw;
 }

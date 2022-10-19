@@ -12,11 +12,17 @@
   justify-content: center;
   align-items: center;
   gap: 2vh;
+  
+}
+
+#outlined-basic {
+  color: #B1AA9A;
 }
 
 .todo-main {
   gap: 5vh;
   font-family: 'Libre Baskerville', serif;
+
 }
 .add-todo-btn {
   background-color: antiquewhite;

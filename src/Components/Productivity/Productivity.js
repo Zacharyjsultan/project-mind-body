@@ -10,7 +10,7 @@ import { Redirect } from 'react-router-dom';
 import useProfile from '../../hooks/useProfile';
 
 export default function Productivity() {
-  const { user, setUser } = useContext(UserContext);
+  const { setUser } = useContext(UserContext);
   const {
     todos,
     setTodos,

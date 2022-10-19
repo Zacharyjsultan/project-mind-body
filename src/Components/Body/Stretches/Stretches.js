@@ -8,7 +8,6 @@ import { Button } from '@mui/material';
 export default function Stretches() {
   const [stretches, setStretches] = useState([]);
   const [search, setSearch] = useState('');
-  console.log(stretches.instructions);
 
   const searchStretches = async () => {
     const resp = await fetchStretches(search);

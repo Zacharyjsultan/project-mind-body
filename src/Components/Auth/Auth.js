@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { NavLink, Redirect, useParams } from 'react-router-dom';
+import { NavLink, useParams } from 'react-router-dom';
 import { authUser } from '../../services/auth';
 import { useUser } from '../../context/UserContext';
 import Header from '../Header/Header';

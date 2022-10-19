@@ -1,0 +1,17 @@
+.creators-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.creators {
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    color: white;
+}
+
+.image {
+    width: 10vw;
+}

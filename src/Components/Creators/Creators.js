@@ -1,4 +1,5 @@
 import React from 'react';
+import './Creators.css';
 
 export default function Creators() {
   return (
@@ -7,20 +8,20 @@ export default function Creators() {
         <div className="creators">
           <p className="andrew">
             Andrew
-            <img src={require('./andrew.jpg')} />
+            <img className="image" src={require('./andrew.jpg')} />
             https://www.linkedin.com/in/andrewjamesboyle/ https://github.com/andrewjamesboyle
           </p>
           <p className="zach">
-            <img src={require('./zatchery.jpg')} />
+            <img className="image" src={require('./zatchery.JPG')} />
             Zach https://www.linkedin.com/in/zachary-sultan/ https://github.com/Zacharyjsultan
           </p>
           <p className="charlie">
+            <img className="image" src={require('./charlie.png')} />
             Charlie
-            <img src={require('./charlie.png')} />
           </p>
           <p className="kyle">
+            <img className="image" src={require('./me.jpeg')} />
             Kyle
-            <img src={require('./me.jpeg')} />
             https://www.linkedin.com/in/kyle-mccall/ https://github.com/kyle-j-mccall
           </p>
         </div>

@@ -2,8 +2,8 @@
   background-color: rgb(216, 233, 168);
   color: rgb(25, 26, 25);
   width: 15vw;
-  height: 90vw;
-  min-height: 90vw;
+  height: 90vh;
+  min-height: 80vh;
   position: fixed;
   flex-shrink: 0;
   display: flex;

@@ -1,7 +1,7 @@
 .stretches-body {
   display: grid;
   grid-template-rows: 2fr 10fr;
-  overflow-y: scroll;
+  overflow-y: auto;
 }
 
 .stretches-input {

@@ -13,12 +13,16 @@ export default function Header() {
       </div>
 
       <div className="nav-links">
-        <NavLink to="/home/mind">
-          <Button variant="outlined">Mind</Button>
-        </NavLink>
-        <NavLink to="/home/body">
-          <Button variant="outlined">Body</Button>
-        </NavLink>
+        <div>
+          <NavLink to="/home/mind">
+            <Button variant="outlined">Mind</Button>
+          </NavLink>
+        </div>
+        <div>
+          <NavLink to="/home/body">
+            <Button variant="outlined">Body</Button>
+          </NavLink>
+        </div>
       </div>
     </header>
   );

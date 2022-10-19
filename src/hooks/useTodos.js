@@ -11,7 +11,6 @@ function useTodos() {
   const [error, setError] = useState('');
   const [description, setDescription] = useState('');
   const { user } = useContext(UserContext);
-  const owner = user.id;
 
   useEffect(() => {
     const loadData = async () => {
@@ -31,11 +30,11 @@ function useTodos() {
 
   const handleCreateTodo = async (e) => {
     e.preventDefault();
-    
+
     await createTodo(description);
     const todosArr = await getTodos();
 
-    const userTodos = todosArr.filter((todo) => owner === todo.user_id);
+    const userTodos = todosArr.filter((todo) => user.id === todo.user_id);
 
     setTodos(userTodos);
     setDescription('');
@@ -59,7 +58,17 @@ function useTodos() {
     }
   };
 
-  return { todos, loading, error, setTodos, handleCreateTodo, description, setDescription, handleComplete, handleDelete };
+  return {
+    todos,
+    loading,
+    error,
+    setTodos,
+    handleCreateTodo,
+    description,
+    setDescription,
+    handleComplete,
+    handleDelete,
+  };
 }
 
 export default useTodos;

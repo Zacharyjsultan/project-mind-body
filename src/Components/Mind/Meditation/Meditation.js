@@ -1,9 +1,15 @@
 import { Button } from '@mui/material';
-import React from 'react';
-import { NavLink } from 'react-router-dom';
+import React, { useContext } from 'react';
+import { NavLink, Redirect } from 'react-router-dom';
+import { UserContext } from '../../../context/UserContext';
 import './Meditation.css';
 
 export default function Meditation() {
+  const { user } = useContext(UserContext);
+
+  if (!user) {
+    return <Redirect to="/auth/sign-in" />;
+  }
   return (
     <div className="meditation-body">
       <div className="grid-top">

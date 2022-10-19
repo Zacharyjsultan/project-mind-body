@@ -22,7 +22,7 @@ export default function Landing() {
       <div id="text-container">
         <NavLink to="/home" className="enter-link">
           <div className="enter-container">
-            <p className="enter">Enter</p>
+            <p className="enter">Enter {user.email}</p>
           </div>
         </NavLink>
       </div>

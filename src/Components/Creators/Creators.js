@@ -13,7 +13,7 @@ export default function Creators() {
             Andrew
             <p></p>
             <Link
-              class="social-icon-link github"
+              className="social-icon-link github"
               to={{ pathname: 'https://github.com/andrewjamesboyle' }}
               target="_blank"
               aria-label="Github"
@@ -22,7 +22,7 @@ export default function Creators() {
               Github
             </Link>
             <Link
-              class="social-icon-link github"
+              className="social-icon-link github"
               to={{ pathname: 'https://www.linkedin.com/in/andrewjamesboyle/' }}
               target="_blank"
               aria-label="LinkedIn"
@@ -36,7 +36,7 @@ export default function Creators() {
             Zach
             <p></p>
             <Link
-              class="social-icon-link github"
+              className="social-icon-link github"
               to={{ pathname: 'https://github.com/Zacharyjsultan' }}
               target="_blank"
               aria-label="Github"
@@ -45,7 +45,7 @@ export default function Creators() {
               Github
             </Link>
             <Link
-              class="social-icon-link github"
+              className="social-icon-link github"
               to={{ pathname: 'https://www.linkedin.com/in/zachary-sultan/' }}
               target="_blank"
               aria-label="LinkedIn"
@@ -60,7 +60,7 @@ export default function Creators() {
             <p></p>
           </p>
           <Link
-            class="social-icon-link github"
+            className="social-icon-link github"
             to={{ pathname: 'https://github.com/charlescrabtree' }}
             target="_blank"
             aria-label="Github"
@@ -70,7 +70,7 @@ export default function Creators() {
           </Link>
 
           <Link
-            class="social-icon-link github"
+            className="social-icon-link github"
             to={{ pathname: 'https://www.linkedin.com/in/charles-crabtree/' }}
             target="_blank"
             aria-label="LinkedIn"
@@ -85,7 +85,7 @@ export default function Creators() {
             <p></p>
           </p>
           <Link
-            class="social-icon-link github"
+            className="social-icon-link github"
             to={{ pathname: 'https://github.com/kyle-j-mccall' }}
             target="_blank"
             aria-label="Github"
@@ -94,7 +94,7 @@ export default function Creators() {
             Github
           </Link>
           <Link
-            class="social-icon-link github"
+            className="social-icon-link github"
             to={{ pathname: 'https://www.linkedin.com/in/kyle-mccall/' }}
             target="_blank"
             aria-label="LinkedIn"

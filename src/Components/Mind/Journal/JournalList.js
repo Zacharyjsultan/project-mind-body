@@ -1,13 +1,14 @@
 import React from 'react';
 import useJournals from '../../../hooks/useJournals';
 import JournalCard from './JournalCard';
+import './JournalCard.css';
 
 export default function JournalList() {
   const { journals } = useJournals();
-
+  console.log(journals);
   return (
     <>
-      <div className="journal-container">
+      <div className="journal-list">
         {journals.map((journal) => (
           <JournalCard key={journal.id} {...journal} />
         ))}

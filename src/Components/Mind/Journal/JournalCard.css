@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Shalimar&display=swap');
 
-.main {
+.journal-list {
   background-image: url('../../../../public/journal.jpg');
   height: 100vh;
   background-size: cover;

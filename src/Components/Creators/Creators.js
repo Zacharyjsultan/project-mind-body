@@ -65,7 +65,7 @@ export default function Creators() {
               target="_blank"
               aria-label="Github"
             >
-              <i className="fab fa-github" />
+              <i className="fa fa-github"></i>
             Github
             </Link>
           &

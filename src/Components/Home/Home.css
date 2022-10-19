@@ -1,8 +1,29 @@
 .home-main {
   height: 100vh;
   width: 100vw;
-  background-color: rgb(81, 152, 114);
+  background-color: rgb(165, 201, 202);
   font-family: 'Libre Baskerville', serif;
+
+  width: 100vw;
+  height: 100vh;
+  background: url('https://unsplash.it/1920/1024?image=684');
+  background-size: cover;
+  background-position: center top;
+  background-repeat: no-repeat;
+  -webkit-animation-name: moveBG;
+  animation-name: moveBG;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+  -webkit-animation-direction: alternate;
+  animation-direction: alternate;
+  -webkit-animation-timing-function: linear;
+  animation-timing-function: linear;
+  -webkit-animation-duration: 30s;
+  animation-duration: 30s;
+}
+
+a {
+  text-decoration: none;
 }
 
 .nav-links {
@@ -10,9 +31,28 @@
   justify-content: space-around;
   align-items: center;
   margin-left: 15vw;
+  margin-top: 2vh;
 }
 
 .home-components {
   width: 85vw;
   margin-left: 15vw;
 }
+
+/* @-webkit-keyframes moveBG {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-20vw);
+  }
+}
+
+@keyframes moveBG {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-20vw);
+  }
+} */

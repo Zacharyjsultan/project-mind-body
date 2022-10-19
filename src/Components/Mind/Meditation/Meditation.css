@@ -1,6 +1,18 @@
 .meditation-body {
   height: 100vh;
   background-color: black;
+  display: grid;
+  grid-template-rows: 10% 90%;
+}
+
+.grid-top {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.med-navlink {
+  text-decoration: none;
 }
 
 ul,

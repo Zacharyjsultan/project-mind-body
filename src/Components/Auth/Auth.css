@@ -1,0 +1,63 @@
+.input-container {
+  border: 2px solid rgb(56, 41, 51);
+  border-radius: 8px;
+  display: grid;
+  grid-template-rows: 1fr 2fr 1fr;
+  padding-left: 3vh;
+  padding-right: 3vh;
+  padding-top: 2vh;
+  padding-bottom: 2vh;
+  font-family: 'Libre Baskerville', serif;
+  background-color: rgb(223, 246, 255);
+  box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.52);
+  -webkit-box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.52);
+  -moz-box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.52);
+}
+
+.auth-link {
+  text-decoration: none;
+}
+
+.auth-button {
+  margin: 1vh;
+}
+
+.auth-main {
+  background-image: url(//c1.staticflickr.com/8/7567/15933601332_0b2b43f8a6_k.jpg);
+  background-size: cover;
+  height: 90vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.auth-nav {
+  display: flex;
+  padding: 2vh;
+  justify-content: space-evenly;
+}
+.input-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2vh;
+  gap: 2vh;
+}
+.submit-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.email-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1vh;
+}
+
+.password-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1vh;
+}

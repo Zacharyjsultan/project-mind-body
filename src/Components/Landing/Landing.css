@@ -1,0 +1,47 @@
+@import url('https://fonts.googleapis.com/css?family=Playfair+Display');
+html,
+body {
+  background-image: linear-gradient(to top, #0d2c36 0%, #b37b6e 100%);
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+.enter {
+  color: #fff;
+  font-size: 50px;
+  font-family: 'Playfair Display', serif;
+  letter-spacing: 20px;
+  text-align: center;
+  vertical-align: middle;
+}
+.mountains {
+  width: 100%;
+  background-size: cover;
+}
+#text-container {
+  position: absolute;
+  margin: auto;
+  top: 300px;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 600px;
+  height: 500px;
+}
+
+.enter-link {
+  text-decoration: none;
+}
+
+.enter-container {
+  border: 4px solid white;
+  border-radius: 12px;
+}
+
+.enter-container:hover {
+  transform: scale(1.1);
+  transition: 0.5s all ease-in-out;
+  box-shadow: 5px 5px 5px -5px rgba(255, 255, 255, 0.45);
+  -webkit-box-shadow: 5px 5px 5px -5px rgba(255, 255, 255, 0.45);
+  -moz-box-shadow: 5px 5px 5px -5px rgba(255, 255, 255, 0.45);
+}

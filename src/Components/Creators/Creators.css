@@ -3,6 +3,7 @@
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
+    margin: 5em;
 }
 
 .creators {
@@ -10,8 +11,11 @@
     display: flex;
     align-items: center;
     color: white;
+    margin: 5em;
+    padding: 5em;
 }
 
 .image {
     width: 10vw;
+    margin: auto
 }

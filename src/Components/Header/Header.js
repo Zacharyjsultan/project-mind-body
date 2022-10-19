@@ -9,7 +9,7 @@ export default function Header() {
   return (
     <header>
       <div className="header-title">
-        <h2>To-dos Amigos</h2>
+        <h2>Desk Jockey</h2>
       </div>
 
       <div className="nav-links">

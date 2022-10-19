@@ -7,6 +7,7 @@ import Header from '../Header/Header';
 import Journal from '../Mind/Journal/Journal';
 import JournalList from '../Mind/Journal/JournalList';
 // import Meditation from '../Mind/Meditation/Meditation';
+import Body from '../Body/Body';
 
 import Mind from '../Mind/Mind';
 import Productivity from '../Productivity/Productivity';
@@ -35,6 +36,7 @@ export default function Home() {
         <Switch>
           {/* <Route exact path="/home" component={Landing} /> */}
           <Route path="/home/mind" component={Mind} />
+          <Route path="/home/body" component={Body} />
 
           <Route path="/home/journal/list" component={JournalList} />
           <Route path="/home/journal" component={Journal} />

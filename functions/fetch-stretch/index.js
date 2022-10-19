@@ -1,12 +1,6 @@
 const fetch = require('cross-fetch');
 require('dotenv').config({ path: `.env.development.local` });
 
-const headers = {
-  'Access-Control-Allow-Origin': '*',
-  'Access-Control-Allow-Headers': 'Content-Type',
-  'Access-Control-Allow-Methods': 'GET, POST, PUT, DELETE',
-};
-
 exports.handler = async (event) => {
 
   const search = event.queryStringParameters.search;
@@ -19,11 +13,12 @@ exports.handler = async (event) => {
         }
       }
     );
+    console.log('resp', resp);
     const data = await resp.json();
-    console.log(data);
+    console.log('data', data);
     return {
       statusCode: 200,
-      body: JSON.stringify(data.instructions),
+      body: JSON.stringify(data),
     };
   } catch (e) {
    

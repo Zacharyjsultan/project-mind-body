@@ -54,7 +54,7 @@ export default function Productivity() {
         <Pomodoro />
       </div>
       <div className="signout">
-        {/* <img src={require('./logout.png')} className="logout-icon" /> */}
+        <img src={require('./logout.png')} className="logout-icon" />
         <Button variant="outlined" className="signout-btn" onClick={handleLogout}>
           Signout
         </Button>

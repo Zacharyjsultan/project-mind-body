@@ -4,7 +4,7 @@ import { authUser } from '../../services/auth';
 import { useUser } from '../../context/UserContext';
 import Header from '../Header/Header';
 import './Auth.css';
-import { Button } from '@mui/material';
+import { Button, TextField } from '@mui/material';
 import { createProfile } from '../../services/profiles';
 import { useHistory } from 'react-router-dom';
 
@@ -29,6 +29,7 @@ export default function Auth() {
       setUser(userResp);
       setEmail('');
       setPassword('');
+      history.push('/landing');
     }
   };
 
@@ -47,28 +48,25 @@ export default function Auth() {
         <Header />
         <div className="auth-main">
           <div className="input-container">
-            <div className="auth-nav">
-              <NavLink to="/auth/sign-in" className="auth-link">
-                <Button variant="outlined" className="auth-button">
-                  Sign in
-                </Button>
-              </NavLink>
-              <NavLink to="/auth/sign-up" className="auth-link">
-                <Button variant="outlined" className="auth-button">
-                  Sign up
-                </Button>
-              </NavLink>
-            </div>
-
             <div className="input-form">
               <div className="email-container">
-                <label>Full name</label>
-                <input type="text" value={fullName} onChange={(e) => setfullName(e.target.value)} />
+                <TextField
+                  id="outlined-basic"
+                  label="Full name"
+                  variant="outlined"
+                  value={fullName}
+                  onChange={(e) => setfullName(e.target.value)}
+                />
               </div>
 
               <div className="password-container">
-                <label>Username</label>
-                <input type="text" value={username} onChange={(e) => setUsername(e.target.value)} />
+                <TextField
+                  id="outlined-basic"
+                  label="Username"
+                  variant="outlined"
+                  value={username}
+                  onChange={(e) => setUsername(e.target.value)}
+                />
               </div>
             </div>
 
@@ -108,13 +106,20 @@ export default function Auth() {
 
           <div className="input-form">
             <div className="email-container">
-              <label>Email</label>
-              <input type="text" value={email} onChange={(e) => setEmail(e.target.value)} />
+              <TextField
+                id="outlined-basic"
+                label="Email"
+                variant="outlined"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+              />
             </div>
 
             <div className="password-container">
-              <label>Password</label>
-              <input
+              <TextField
+                id="outlined-basic"
+                label="Password"
+                variant="outlined"
                 type="password"
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}

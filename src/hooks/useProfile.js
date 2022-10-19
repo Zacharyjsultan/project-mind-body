@@ -9,6 +9,7 @@ function useProfile() {
   const [profLoading, setProfLoading] = useState(true);
   const [error, setError] = useState('');
   const { user } = useContext(UserContext);
+  console.log(user.id);
 
   useEffect(() => {
     const loadData = async () => {

@@ -8,9 +8,11 @@ import { Button } from '@mui/material';
 import { signOut } from '../../services/auth';
 import { Redirect } from 'react-router-dom';
 
+
 export default function Productivity() {
   const { user, setUser } = useContext(UserContext);
-  const { todos, setTodos } = useTodos();
+  const { todos, setTodos, loading, handleCreateTodo, description, setDescription } = useTodos();
+  
 
   const handleLogout = async () => {
     await signOut();
@@ -18,13 +20,19 @@ export default function Productivity() {
     return <Redirect to="/auth/sign-in" />;
   };
 
+
+
+  if (loading) {
+    return <h1>Loading</h1>;
+  }
+
   return (
     <div className="productivity-main">
       <div className="greeting">
         <div>Hello {user.email}</div>
       </div>
       <div className="todo-section">
-        <Todos todos={todos} setTodos={setTodos} />
+        <Todos todos={todos} setTodos={setTodos} loading={loading} handleCreateTodo={handleCreateTodo} description={description} setDescription={setDescription} />
       </div>
       <div className="pomodoro-section">
         <Pomodoro />

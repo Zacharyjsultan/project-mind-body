@@ -1,25 +1,10 @@
 import React, { useState } from 'react';
 import TextField from '@mui/material/TextField';
-import { toggleComplete, createTodo, getTodos, deleteTodo } from '../../services/todos';
+import { toggleComplete, getTodos, deleteTodo } from '../../services/todos';
 import './Todos.css';
 import TodoCard from '../TodoCard/TodoCard';
-import { useContext } from 'react';
-import { UserContext } from '../../context/UserContext';
 
-export default function Todos({ todos, setTodos }) {
-  const [description, setDescription] = useState('');
-  const { user } = useContext(UserContext);
-
-  const owner = user.id;
-
-  const handleCreateTodo = async () => {
-    await createTodo(description);
-    const todosArr = await getTodos();
-
-    const userTodos = todosArr.filter((todo) => owner === todo.user_id);
-
-    setTodos(userTodos);
-  };
+export default function Todos({ todos, setTodos, loading, handleCreateTodo, description, setDescription }) {
 
   const handleComplete = async (id, complete) => {
     const updatedTodo = await toggleComplete(id, complete);
@@ -39,10 +24,14 @@ export default function Todos({ todos, setTodos }) {
     }
   };
 
+  if (loading) {
+    return <h1>Loading</h1>;
+  }
+
   return (
     <div className="todo-main">
       <h2>Todos</h2>
-      <form onSubmit={handleCreateTodo}>
+      <form onSubmit={(e)=>handleCreateTodo(e)}>
         <div className="todo-input">
           <TextField
             id="outlined-basic"

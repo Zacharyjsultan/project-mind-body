@@ -5,7 +5,7 @@ import './JournalCard.css';
 
 export default function JournalList() {
   const { journals } = useJournals();
-  console.log(journals);
+
   return (
     <>
       <div className="journal-list">

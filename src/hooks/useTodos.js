@@ -3,7 +3,7 @@ import { useContext, useEffect } from 'react';
 import { useState } from 'react';
 import { UserContext } from '../context/UserContext';
 
-import { createTodo, getTodos } from '../services/todos';
+import { createTodo, deleteTodo, getTodos, toggleComplete } from '../services/todos';
 
 function useTodos() {
   const [todos, setTodos] = useState([]);
@@ -41,7 +41,25 @@ function useTodos() {
     setDescription('');
   };
 
-  return { todos, loading, error, setTodos, handleCreateTodo, description, setDescription };
+  const handleComplete = async (id, complete) => {
+    const updatedTodo = await toggleComplete(id, complete);
+    setTodos((prevTodos) =>
+      prevTodos.map((prevTodo) => (prevTodo.id === id ? updatedTodo : prevTodo))
+    );
+  };
+
+  const handleDelete = async () => {
+    try {
+      await deleteTodo(todos);
+      setTodos(await getTodos());
+      setDescription('');
+    } catch (e) {
+      // eslint-disable-next-line no-console
+      console.error(e.message);
+    }
+  };
+
+  return { todos, loading, error, setTodos, handleCreateTodo, description, setDescription, handleComplete, handleDelete };
 }
 
 export default useTodos;

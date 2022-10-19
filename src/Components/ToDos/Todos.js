@@ -1,28 +1,11 @@
-import React, { useState } from 'react';
+import React from 'react';
 import TextField from '@mui/material/TextField';
-import { toggleComplete, getTodos, deleteTodo } from '../../services/todos';
 import './Todos.css';
 import TodoCard from '../TodoCard/TodoCard';
 
-export default function Todos({ todos, setTodos, loading, handleCreateTodo, description, setDescription }) {
+export default function Todos({ todos, loading, handleCreateTodo, description, setDescription, handleComplete, handleDelete }) {
 
-  const handleComplete = async (id, complete) => {
-    const updatedTodo = await toggleComplete(id, complete);
-    setTodos((prevTodos) =>
-      prevTodos.map((prevTodo) => (prevTodo.id === id ? updatedTodo : prevTodo))
-    );
-  };
 
-  const handleDelete = async () => {
-    try {
-      await deleteTodo(todos);
-      setTodos(await getTodos());
-      setDescription('');
-    } catch (e) {
-      // eslint-disable-next-line no-console
-      console.error(e.message);
-    }
-  };
 
   if (loading) {
     return <h1>Loading</h1>;

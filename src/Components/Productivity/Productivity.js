@@ -11,7 +11,7 @@ import { Redirect } from 'react-router-dom';
 
 export default function Productivity() {
   const { user, setUser } = useContext(UserContext);
-  const { todos, setTodos, loading, handleCreateTodo, description, setDescription } = useTodos();
+  const { todos, setTodos, loading, handleCreateTodo, description, setDescription, handleComplete, handleDelete } = useTodos();
   
 
   const handleLogout = async () => {
@@ -32,7 +32,15 @@ export default function Productivity() {
         <div>Hello {user.email}</div>
       </div>
       <div className="todo-section">
-        <Todos todos={todos} setTodos={setTodos} loading={loading} handleCreateTodo={handleCreateTodo} description={description} setDescription={setDescription} />
+        <Todos 
+          todos={todos} 
+          setTodos={setTodos} 
+          loading={loading} 
+          handleCreateTodo={handleCreateTodo} 
+          description={description} 
+          setDescription={setDescription} 
+          handleComplete={handleComplete} 
+          handleDelete={handleDelete} />
       </div>
       <div className="pomodoro-section">
         <Pomodoro />

@@ -1,7 +1,7 @@
 import React, { useContext } from 'react';
-import { NavLink, Redirect, Route, Switch } from 'react-router-dom';
+import { Redirect, Route, Switch } from 'react-router-dom';
 import { UserContext } from '../../context/UserContext';
-import { Button } from '@mui/material';
+
 import Header from '../Header/Header';
 
 import Journal from '../Mind/Journal/Journal';

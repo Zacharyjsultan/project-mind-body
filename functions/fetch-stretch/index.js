@@ -6,7 +6,7 @@ exports.handler = async (event) => {
   const search = event.queryStringParameters.search;
 
   try {
-    const resp = await fetch(`https://api.api-ninjas.com/v1/exercises?muscle=${search}`,
+    const resp = await fetch(`https://api.api-ninjas.com/v1/exercises?muscle=${search}&type=stretching`,
       {
         headers: {
           'X-Api-Key': `${process.env.REACT_APP_X_API_KEY}`

@@ -7,17 +7,17 @@ export default function Stretches() {
   const [stretches, setStretches] = useState([]);
   const [search, setSearch] = useState('');
 
-  console.log('search', search);
-  useEffect(() => {
-    const fetchData = async () => {
-      const data = await fetchStretches();
-      // const resp = await fetch('/.netlify/functions/fetch-stretch');
-      // console.log(resp.body);
-      // const data = await resp.json();
-      setStretches(data);
-    };
-    fetchData();
-  }, []);
+
+//   useEffect(() => {
+//     const fetchData = async () => {
+//       const data = await fetchStretches();
+//       // const resp = await fetch('/.netlify/functions/fetch-stretch');
+//       // console.log(resp.body);
+//       // const data = await resp.json();
+//       setStretches(data);
+//     };
+//     fetchData();
+//   }, [search]);
 
   const searchStretches = async () => {
     const resp = await fetchStretches(search);
@@ -29,8 +29,8 @@ export default function Stretches() {
     <div>
       <label>Search for a stretch</label>  
       <input value={search} onChange={(e) => setSearch(e.target.value)} />
-      {stretches.map((stretch) => (
-        <div key={stretch}>{stretch.instructions}</div>
+      {stretches.map((stretch, idx) => (
+        <div key={idx}>{stretch.name}{stretch.instructions}</div>
       ))}
       <button onClick={searchStretches}>Search</button>
     </div>

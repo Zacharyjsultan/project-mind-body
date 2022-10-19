@@ -27,7 +27,7 @@ export default function Mind() {
           <img className="meditation-img" src={require('./meditation.png')} />
         </div>
         <div className="meditation-redirect">
-          <NavLink className="mind-links" to="/home/meditation">
+          <NavLink className="mind-links" to="/meditation">
             <Button variant="outlined">Meditate</Button>
           </NavLink>
         </div>

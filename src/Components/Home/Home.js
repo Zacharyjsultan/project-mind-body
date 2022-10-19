@@ -34,7 +34,7 @@ export default function Home() {
           <Route path="/home/body" component={Body} />
           <Route path="/home/journal/list" component={JournalList} />
           <Route path="/home/journal" component={Journal} />
-          <Route path="/home/meditation" component={Meditation} />
+          {/* <Route path="/home/meditation" component={Meditation} /> */}
         </Switch>
       </div>
     </div>

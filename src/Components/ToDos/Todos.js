@@ -3,14 +3,22 @@ import TextField from '@mui/material/TextField';
 import { toggleComplete, createTodo, getTodos, deleteTodo } from '../../services/todos';
 import './Todos.css';
 import TodoCard from '../TodoCard/TodoCard';
+import { useContext } from 'react';
+import { UserContext } from '../../context/UserContext';
 
 export default function Todos({ todos, setTodos }) {
   const [description, setDescription] = useState('');
+  const { user } = useContext(UserContext);
+
+  const owner = user.id;
 
   const handleCreateTodo = async () => {
     await createTodo(description);
     const todosArr = await getTodos();
-    setTodos(todosArr);
+
+    const userTodos = todosArr.filter((todo) => owner === todo.user_id);
+
+    setTodos(userTodos);
   };
 
   const handleComplete = async (id, complete) => {

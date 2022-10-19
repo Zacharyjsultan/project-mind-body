@@ -10,8 +10,8 @@ export default function Creators() {
         <div className="creators">
           <p className="andrew">
             <img className="image" src={require('./andrew.jpg')} />
-            Andrew
-            <p></p>
+            
+            <p>Andrew</p>
             <Link
               className="social-icon-link github"
               to={{ pathname: 'https://github.com/andrewjamesboyle' }}
@@ -34,8 +34,8 @@ export default function Creators() {
           </p>
           <p className="zach">
             <img className="image" src={require('./zatchery.JPG')} />
-            Zach
-            <p></p>
+            
+            <p>Zach</p>
             <Link
               className="social-icon-link github"
               to={{ pathname: 'https://github.com/Zacharyjsultan' }}
@@ -58,53 +58,50 @@ export default function Creators() {
           </p>
           <p className="charlie">
             <img className="image" src={require('./charlie.png')} />
-            Charlie
-            <p></p>
-          </p>
-          <Link
-            className="social-icon-link github"
-            to={{ pathname: 'https://github.com/charlescrabtree' }}
-            target="_blank"
-            aria-label="Github"
-          >
-            <i className="fab fa-github" />
+            <p>Charlie</p>
+            <Link
+              className="social-icon-link github"
+              to={{ pathname: 'https://github.com/charlescrabtree' }}
+              target="_blank"
+              aria-label="Github"
+            >
+              <i className="fab fa-github" />
             Github
-          </Link>
+            </Link>
           &
-          <Link
-            className="social-icon-link github"
-            to={{ pathname: 'https://www.linkedin.com/in/charles-crabtree/' }}
-            target="_blank"
-            aria-label="LinkedIn"
-          >
-            <i className="fab fa-github" />
+            <Link
+              className="social-icon-link github"
+              to={{ pathname: 'https://www.linkedin.com/in/charles-crabtree/' }}
+              target="_blank"
+              aria-label="LinkedIn"
+            >
+              <i className="fab fa-github" />
             LinkedIn
-          </Link>
+            </Link>
+          </p>
           <p className="kyle">
             <img className="image" src={require('./me.jpeg')} />
-            <p></p>
-            Kyle
-            <p></p>
-          </p>
-          <Link
-            className="social-icon-link github"
-            to={{ pathname: 'https://github.com/kyle-j-mccall' }}
-            target="_blank"
-            aria-label="Github"
-          >
-            <i className="fab fa-github" />
+            <p> Kyle</p>
+            <Link
+              className="social-icon-link github"
+              to={{ pathname: 'https://github.com/kyle-j-mccall' }}
+              target="_blank"
+              aria-label="Github"
+            >
+              <i className="fab fa-github" />
             Github
-          </Link>
+            </Link>
           &
-          <Link
-            className="social-icon-link github"
-            to={{ pathname: 'https://www.linkedin.com/in/kyle-mccall/' }}
-            target="_blank"
-            aria-label="LinkedIn"
-          >
-            <i className="fab fa-github" />
+            <Link
+              className="social-icon-link github"
+              to={{ pathname: 'https://www.linkedin.com/in/kyle-mccall/' }}
+              target="_blank"
+              aria-label="LinkedIn"
+            >
+              <i className="fab fa-github" />
             LinkedIn
-          </Link>
+            </Link>
+          </p>
         </div>
       </div>
     </div>

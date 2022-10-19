@@ -21,6 +21,7 @@ export default function Creators() {
               <i className="fab fa-github" />
               Github
             </Link>
+            &
             <Link
               className="social-icon-link github"
               to={{ pathname: 'https://www.linkedin.com/in/andrewjamesboyle/' }}
@@ -44,6 +45,7 @@ export default function Creators() {
               <i className="fab fa-github" />
               Github
             </Link>
+            &
             <Link
               className="social-icon-link github"
               to={{ pathname: 'https://www.linkedin.com/in/zachary-sultan/' }}
@@ -68,7 +70,7 @@ export default function Creators() {
             <i className="fab fa-github" />
             Github
           </Link>
-
+          &
           <Link
             className="social-icon-link github"
             to={{ pathname: 'https://www.linkedin.com/in/charles-crabtree/' }}
@@ -93,6 +95,7 @@ export default function Creators() {
             <i className="fab fa-github" />
             Github
           </Link>
+          &
           <Link
             className="social-icon-link github"
             to={{ pathname: 'https://www.linkedin.com/in/kyle-mccall/' }}

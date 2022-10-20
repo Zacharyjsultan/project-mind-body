@@ -3,7 +3,7 @@ import { UserContext } from '../../context/UserContext';
 import './Productivity.css';
 import Todos from '../ToDos/Todos';
 import useTodos from '../../hooks/useTodos';
-import Pomodoro from '../Pomodoro/Pomodoro';
+import ProdTimer from '../ProdTimer/ProdTimer';
 import { Button } from '@mui/material';
 import { signOut } from '../../services/auth';
 import { Redirect } from 'react-router-dom';
@@ -59,13 +59,8 @@ export default function Productivity() {
         />
       </div>
       <div className="pomodoro-section">
-        <Pomodoro />
+        <ProdTimer />
       </div>
-      {/* <div>
-        <audio controls autoPlay loop>
-          <source src={'./rain-30.mp3'} type="audio/mp3" autoPlay={true} />
-        </audio>
-      </div> */}
       <div className="signout">
         <img src={require('./logout.png')} className="logout-icon" />
         <Button variant="contained" className="signout-btn" onClick={handleLogout}>

@@ -36,7 +36,7 @@ export default function Home() {
       {!component && (
         <div className="home-flex">
           <h2 className="slogan">Your productivity hub.</h2>
-          <div className="video-container">
+          {/* <div className="video-container">
             <video
               src={require('./code-hands.mp4')}
               width="1000"
@@ -45,7 +45,7 @@ export default function Home() {
               autoPlay={true}
               loop
             />
-          </div>
+          </div> */}
         </div>
       )}
 

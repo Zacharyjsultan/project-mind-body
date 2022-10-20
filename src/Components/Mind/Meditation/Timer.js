@@ -7,7 +7,6 @@ export default function Timer() {
   const [minutes, setMinutes] = useState(0);
   const [seconds, setSeconds] = useState(0);
 
-  console.log('seconds', seconds);
 
   const deadline = 'October, 31, 2022';
 

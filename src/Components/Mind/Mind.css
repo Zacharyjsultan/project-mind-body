@@ -1,7 +1,24 @@
 .mind-main {
-  height: 90vh;
+  height: 92vh;
   display: grid;
   grid-template-rows: 1fr 1fr;
+  background-image: url('./tree-moon.jpg');
+}
+
+.ease-mind h2 {
+  font-family: 'Norican', cursive;
+  font-weight: lighter;
+  margin-right: 5vw;
+  font-size: 7vh;
+  background: -webkit-linear-gradient(rgb(255, 255, 255), rgb(0, 135, 254));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: mindAnim 3s linear 0s 1 normal forwards;
+}
+
+.mind-nav {
+  font-family: 'Norican', cursive;
+  font-size: 2vh;
 }
 
 .journal-path {
@@ -9,7 +26,6 @@
   grid-template-columns: 1fr 1fr;
   justify-content: center;
   align-items: center;
-  background-color: rgb(165, 201, 202);
 }
 
 .meditation-path {
@@ -19,7 +35,6 @@
   align-items: center;
 
   background-position: 0%;
-  background-color: rgb(165, 201, 202);
 }
 
 .mind-links {
@@ -33,5 +48,32 @@
 }
 
 .meditation-img {
-  height: 30vh;
+  cursor: pointer;
+
+  height: 25vh;
+  margin-right: 4vw;
+}
+
+.quill-img {
+  cursor: pointer;
+  margin-right: 5vw;
+  height: 22vh;
+}
+
+.meditate-h4 {
+  margin-right: 5.7vw;
+}
+
+.journal-h4 {
+  margin-right: 2vw;
+}
+
+@keyframes mindAnim {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
 }

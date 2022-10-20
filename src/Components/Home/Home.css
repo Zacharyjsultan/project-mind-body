@@ -1,5 +1,5 @@
 .home-main {
-  background-image: url('./polygon-mountain.jpg');
+  background-image: url('./fog-landscape.jpg');
   font-family: 'Raleway', sans-serif;
   color: rgb(223, 246, 255);
   width: 100vw;
@@ -34,6 +34,9 @@ a {
 
 .slogan {
   animation: textAnim 2s ease 0s 1 normal forwards;
+  background: -webkit-linear-gradient(rgb(147, 201, 237), rgb(234, 123, 207));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 @keyframes textAnim {

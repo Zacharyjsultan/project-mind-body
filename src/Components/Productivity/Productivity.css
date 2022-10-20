@@ -18,12 +18,6 @@
   overflow-y: auto;
 }
 
-audio {
-  margin-top: 2vh;
-  width: 8vw;
-  height: 3vh;
-}
-
 .pomodoro-section {
   margin-top: 30vh;
 }

@@ -35,6 +35,9 @@ export default function Productivity() {
 
   return (
     <div className="productivity-main">
+      {/* <div>
+        <img className="hamburger" src={require('./hamburger.png')} />
+      </div> */}
       <div className="greeting">
         <div className="hello">
           <p>Hello</p>
@@ -58,11 +61,11 @@ export default function Productivity() {
       <div className="pomodoro-section">
         <Pomodoro />
       </div>
-      <div>
+      {/* <div>
         <audio controls autoPlay loop>
           <source src={'./rain-30.mp3'} type="audio/mp3" autoPlay={true} />
         </audio>
-      </div>
+      </div> */}
       <div className="signout">
         <img src={require('./logout.png')} className="logout-icon" />
         <Button variant="outlined" className="signout-btn" onClick={handleLogout}>

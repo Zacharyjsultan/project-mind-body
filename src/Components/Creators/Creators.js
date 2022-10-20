@@ -7,7 +7,7 @@ export default function Creators() {
     <div>
       <div className="creators-container">
         <div className="creators">
-          <p className="andrew">
+          <div className="andrew">
             <img className="image" src={require('./andrew.jpg')} />
             <p>Andrew</p>
             <Link
@@ -29,8 +29,8 @@ export default function Creators() {
               <i className="fab fa-github" />
               LinkedIn
             </Link>
-          </p>
-          <p className="zach">
+          </div>
+          <div className="zach">
             <img className="image" src={require('./zatchery.JPG')} />
             <p>Zach</p>
             <Link
@@ -52,8 +52,8 @@ export default function Creators() {
               <i className="fab fa-github" />
               LinkedIn
             </Link>
-          </p>
-          <p className="charlie">
+          </div>
+          <div className="charlie">
             <img className="image" src={require('./charlie.png')} />
             <p>Charlie</p>
             <Link
@@ -75,8 +75,8 @@ export default function Creators() {
               <i className="fab fa-github" />
               LinkedIn
             </Link>
-          </p>
-          <p className="kyle">
+          </div>
+          <div className="kyle">
             <img className="image" src={require('./me.jpeg')} />
             <p> Kyle</p>
             <Link
@@ -98,7 +98,7 @@ export default function Creators() {
               <i className="fab fa-github" />
               LinkedIn
             </Link>
-          </p>
+          </div>
         </div>
       </div>
     </div>

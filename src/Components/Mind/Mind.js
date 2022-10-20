@@ -3,32 +3,26 @@ import { NavLink, Route, Switch } from 'react-router-dom';
 import Journal from './Journal/Journal';
 import JournalList from './Journal/JournalList';
 import './Mind.css';
-import { Button } from '@mui/material';
+
 import Meditation from './Meditation/Meditation';
 
 export default function Mind() {
   return (
     <div className="mind-main">
-      <div className="journal-path">
-        <div className="journal-image-container">
-          <img className="meditation-img" src={require('./journal.png')} />
-        </div>
-        <div className="journal-redirect">
-          <NavLink className="mind-links" to="/home/journal">
-            <Button variant="outlined">Make a journal entry</Button>
-          </NavLink>
-          <NavLink className="mind-links" to="/home/journal/list">
-            <Button variant="outlined">Previous journal entries</Button>
-          </NavLink>
-        </div>
+      <div className="ease-mind">
+        <h2>Ease your mind</h2>
       </div>
       <div className="meditation-path">
         <div className="med-image-container">
-          <img className="meditation-img" src={require('./meditation.png')} />
-        </div>
-        <div className="meditation-redirect">
           <NavLink className="mind-links" to="/meditation">
-            <Button variant="outlined">Meditate</Button>
+            <h4 className="mind-nav meditate-h4">Click to meditate</h4>
+            <img className="meditation-img" src={require('./meditation.png')} />
+          </NavLink>
+        </div>
+        <div className="journal-image-container">
+          <NavLink className="mind-links" to="/home/journal">
+            <h4 className="mind-nav journal-h4">Click to journal</h4>
+            <img className="quill-img" src={require('./quill.png')} />
           </NavLink>
         </div>
       </div>

@@ -13,6 +13,7 @@ export default function Header() {
       </div>
 
       <div className="nav-links">
+
         <div>
           <NavLink to="/home/mind">
             <Button variant="outlined">Mind</Button>
@@ -21,6 +22,11 @@ export default function Header() {
         <div>
           <NavLink to="/home/body">
             <Button variant="outlined">Body</Button>
+          </NavLink>
+        </div>
+        <div>
+          <NavLink to="/home/creators">
+            <Button variant="outlined">Creators</Button>
           </NavLink>
         </div>
       </div>

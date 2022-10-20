@@ -14,6 +14,8 @@ import Productivity from '../Productivity/Productivity';
 import './Home.css';
 import useTodos from '../../hooks/useTodos';
 
+import Creators from '../Creators/Creators';
+
 export default function Home() {
   const { user } = useContext(UserContext);
   const { loading } = useTodos();
@@ -36,9 +38,11 @@ export default function Home() {
           {/* <Route exact path="/home" component={Landing} /> */}
           <Route path="/home/mind" component={Mind} />
           <Route path="/home/body" component={Body} />
+          <Route path="/home/creators" component={Creators} />
 
           <Route path="/home/journal/list" component={JournalList} />
           <Route path="/home/journal" component={Journal} />
+
         </Switch>
       </div>
     </div>

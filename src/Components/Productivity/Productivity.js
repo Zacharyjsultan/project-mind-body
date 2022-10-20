@@ -53,6 +53,11 @@ export default function Productivity() {
       <div className="pomodoro-section">
         <Pomodoro />
       </div>
+      {/* <div>
+        <audio controls autoPlay>
+          <source src="rain.mp3" type="audio/mp3" />
+        </audio>
+      </div> */}
       <div className="signout">
         <img src={require('./logout.png')} className="logout-icon" />
         <Button variant="outlined" className="signout-btn" onClick={handleLogout}>

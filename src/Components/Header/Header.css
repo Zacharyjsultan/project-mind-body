@@ -1,6 +1,7 @@
 header {
   background-color: rgb(44, 51, 51);
-  width: 100%;
+  width: 88vw;
+  margin-left: 12vw;
   color: rgb(223, 246, 255);
   display: grid;
   grid-template-rows: 3fr 1fr;

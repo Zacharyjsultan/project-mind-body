@@ -1,18 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import './Pomodoro.css';
-import InputLabel from '@mui/material/InputLabel';
-import MenuItem from '@mui/material/MenuItem';
-import FormControl from '@mui/material/FormControl';
-import Select, { SelectChangeEvent } from '@mui/material/Select';
 
 export default function Pomodoro() {
   const [minutes, setMinutes] = useState(5);
   const [seconds, setSeconds] = useState(0);
   const [displayMessage, setDisplayMessage] = useState(false);
-
-  const handleTime = (event) => {
-    setMinutes(event.target.value);
-  };
 
   useEffect(() => {
     let interval = setInterval(() => {
@@ -34,7 +26,7 @@ export default function Pomodoro() {
         setSeconds(seconds - 1);
       }
     }, 1000);
-  }, [seconds]);
+  }, [seconds, minutes, displayMessage]);
 
   const timerMinutes = minutes < 10 ? `0${minutes}` : minutes;
   const timerSeconds = seconds < 10 ? `0${seconds}` : seconds;

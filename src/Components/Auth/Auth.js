@@ -2,7 +2,6 @@ import { useState } from 'react';
 import { NavLink, useParams } from 'react-router-dom';
 import { authUser } from '../../services/auth';
 import { useUser } from '../../context/UserContext';
-
 import './Auth.css';
 import { Button, TextField } from '@mui/material';
 import { createProfile } from '../../services/profiles';
@@ -50,7 +49,7 @@ export default function Auth() {
             <div className="input-form">
               <div className="email-container">
                 <TextField
-                  id="outlined-basic"
+                  // id="outlined-basic"
                   label="Full name"
                   variant="outlined"
                   value={fullName}
@@ -60,7 +59,7 @@ export default function Auth() {
 
               <div className="password-container">
                 <TextField
-                  id="outlined-basic"
+                  // id="outlined-basic"
                   label="Username"
                   variant="outlined"
                   value={username}
@@ -105,7 +104,7 @@ export default function Auth() {
           <div className="input-form">
             <div className="email-container">
               <TextField
-                id="outlined-basic"
+                // id="outlined-basic"
                 label="Email"
                 variant="outlined"
                 value={email}
@@ -115,7 +114,7 @@ export default function Auth() {
 
             <div className="password-container">
               <TextField
-                id="outlined-basic"
+                // id="outlined-basic"
                 label="Password"
                 variant="outlined"
                 type="password"

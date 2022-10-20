@@ -9,25 +9,41 @@ export default function Header() {
   return (
     <header>
       <div className="header-title">
-        <h2>Desk Jockey</h2>
+        <NavLink className="home-link" to="/home">
+          <div>
+            <h2 className="desk">Desk</h2>
+          </div>
+          <div>
+            <h2 className="jockey">Jockey</h2>
+          </div>
+        </NavLink>
       </div>
 
       <div className="nav-links">
         <div>
           <NavLink to="/home/mind">
-            <Button variant="outlined">Mind</Button>
+            <Button variant="text" className="header-btn" size="large">
+              Mind
+            </Button>
           </NavLink>
         </div>
         <div>
           <NavLink to="/home/body">
-            <Button variant="outlined">Body</Button>
+            <Button variant="text" className="header-btn" size="large">
+              Body
+            </Button>
           </NavLink>
         </div>
         <div>
           <NavLink to="/home/creators">
-            <Button variant="outlined">Creators</Button>
+            <Button variant="text" className="header-btn" size="large">
+              Creators
+            </Button>
           </NavLink>
         </div>
+      </div>
+      <div className="desk-container">
+        <img className="desk-icon" src={require('./desk.png')} />
       </div>
     </header>
   );

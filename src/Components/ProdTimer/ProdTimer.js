@@ -15,7 +15,7 @@ export default function Pomodoro() {
           setMinutes(minutes - 1);
         } else {
           // let minutes = displayMessage ? 24 : 5;
-          let seconds = 59;
+          let seconds = 0;
 
           setSeconds(seconds);
           setMinutes(minutes);

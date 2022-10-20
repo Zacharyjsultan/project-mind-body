@@ -13,16 +13,16 @@ export default function Landing() {
   }
 
   return (
-    <div id="container">
+    <div className="container">
       <div className="hello-user">
         <p>Hello {profile.full_name}, </p>
         <p>Welcome to Desk Jockey</p>
       </div>
 
-      <div id="text-container">
+      <div className="text-container">
         <NavLink to="/home" className="enter-link">
           <div className="enter-container">
-            <p className="enter">Enter {user.email}</p>
+            <p className="enter">Enter</p>
           </div>
         </NavLink>
       </div>

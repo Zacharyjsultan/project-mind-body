@@ -13,7 +13,6 @@ export default function Header() {
       </div>
 
       <div className="nav-links">
-
         <div>
           <NavLink to="/home/mind">
             <Button variant="outlined">Mind</Button>

@@ -45,7 +45,6 @@ export default function Auth() {
   if (type === 'create-profile') {
     return (
       <div className="auth-body">
-        <Header />
         <div className="auth-main">
           <div className="input-container">
             <div className="input-form">
@@ -88,7 +87,6 @@ export default function Auth() {
 
   return (
     <div className="auth-body">
-      <Header />
       <div className="auth-main">
         <div className="input-container">
           <div className="auth-nav">

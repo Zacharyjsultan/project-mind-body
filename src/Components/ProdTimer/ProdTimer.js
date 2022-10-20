@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import './ProdTimer.css';
+
 export default function Pomodoro() {
   const [minutes, setMinutes] = useState(0);
   const [seconds, setSeconds] = useState(0);
-  // const [displayMessage, setDisplayMessage] = useState(false);
 
   useEffect(() => {
     let interval = setInterval(() => {
@@ -14,12 +14,9 @@ export default function Pomodoro() {
           setSeconds(59);
           setMinutes(minutes - 1);
         } else {
-          // let minutes = displayMessage ? 24 : 5;
           let seconds = 0;
-
           setSeconds(seconds);
           setMinutes(minutes);
-          // setDisplayMessage(!displayMessage);
         }
       } else {
         setSeconds(seconds - 1);
@@ -47,7 +44,6 @@ export default function Pomodoro() {
       </select>}
 
       <div className="pomodoro">
-        {/* <div className="message">{displayMessage && <div>New meditation starts in:</div>}</div> */}
         <div className="small-timer">
           {timerMinutes}:{timerSeconds}
         </div>

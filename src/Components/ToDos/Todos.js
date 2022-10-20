@@ -1,48 +1,20 @@
-import React, { useState } from 'react';
+import React from 'react';
 import TextField from '@mui/material/TextField';
-import { toggleComplete, createTodo, getTodos, deleteTodo } from '../../services/todos';
 import './Todos.css';
 import TodoCard from '../TodoCard/TodoCard';
-import { useContext } from 'react';
-import { UserContext } from '../../context/UserContext';
 
-export default function Todos({ todos, setTodos }) {
-  const [description, setDescription] = useState('');
-  const { user } = useContext(UserContext);
+export default function Todos({ todos, loading, handleCreateTodo, description, setDescription, handleComplete, handleDelete }) {
 
-  const owner = user.id;
 
-  const handleCreateTodo = async () => {
-    await createTodo(description);
-    const todosArr = await getTodos();
 
-    const userTodos = todosArr.filter((todo) => owner === todo.user_id);
-
-    setTodos(userTodos);
-  };
-
-  const handleComplete = async (id, complete) => {
-    const updatedTodo = await toggleComplete(id, complete);
-    setTodos((prevTodos) =>
-      prevTodos.map((prevTodo) => (prevTodo.id === id ? updatedTodo : prevTodo))
-    );
-  };
-
-  const handleDelete = async () => {
-    try {
-      await deleteTodo(todos);
-      setTodos(await getTodos());
-      setDescription('');
-    } catch (e) {
-      // eslint-disable-next-line no-console
-      console.error(e.message);
-    }
-  };
+  if (loading) {
+    return <h1>Loading</h1>;
+  }
 
   return (
     <div className="todo-main">
       <h2>Todos</h2>
-      <form onSubmit={handleCreateTodo}>
+      <form onSubmit={(e)=>handleCreateTodo(e)}>
         <div className="todo-input">
           <TextField
             id="outlined-basic"

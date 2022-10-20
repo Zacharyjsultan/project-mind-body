@@ -1,0 +1,9 @@
+.body-body {
+  height: 89.8vh;
+  margin-top: 0.2vh;
+  margin-right: 2vw;
+  width: 88vw;
+  background-color: rgb(231, 246, 242);
+  background-image: url('./yoga-background-1.png');
+  background-size: cover;
+}

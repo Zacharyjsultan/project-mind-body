@@ -39,12 +39,48 @@
 .social-icon-link {
   color: blue;
   background-color: rgb(191, 212, 253);
+  padding-bottom: 0.3vh;
 }
 
 .names {
   font-size: 2em;
+  background-color: rgb(5, 5, 5);
+  color: whitesmoke;
+  margin-bottom: 1vh;
 }
 
-.prompts {
-  margin-left: 4em;
+.linkedin {
+  height: 30px;
+  background-color: aliceblue;
+  padding: 5px;
+}
+
+.github {
+  height: 30px;
+  background-color: aliceblue;
+}
+
+.andrew {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.kyle {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.charlie {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.zach {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }

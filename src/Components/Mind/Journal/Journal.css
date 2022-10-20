@@ -9,22 +9,24 @@
 
 h1 {
   font-weight: bolder;
-  text-decoration: underline;
   color: white;
   background-color: #000000;
-  opacity: 0.81;
+  opacity: 0.89;
   display: block;
   margin-left: auto;
   margin-right: auto;
   width: 7em;
   padding: 0.4em;
-  border-radius: 80px;
+  border-radius: 15px;
 }
 .journal-inputs {
-  height: 8vh;
-  width: 22vw;
+  height: 7.5vh;
+  width: 26vw;
   margin-top: 2vh;
-  font-size: 11px;
+  font-size: 14px;
+  font-weight: bold;
+  font-family: 'Chalkduster', fantasy;
+
   background: url(http://i.stack.imgur.com/ynxjD.png) repeat-y;
   box-shadow: -7px 10px 5px -4px rgba(0, 0, 0, 0.69);
   -webkit-box-shadow: -7px 10px 5px -4px rgba(0, 0, 0, 0.69);
@@ -34,7 +36,7 @@ h1 {
 .journal-container {
   margin-left: 10vh;
   min-width: 875px;
-  min-height: 675px;
+  min-height: 695px;
   border: #0ea800 3px solid;
   background-image: url('backgroundimg101.jpeg');
   display: grid;
@@ -72,7 +74,7 @@ h1 {
 .submit {
   display: inline-block;
   padding: 0.5em 1.2em;
-  border: 0.1em solid #096200;
+  border: 0.3em solid #096200;
   margin: 2em;
   border-radius: 0.12em;
   box-sizing: border-box;
@@ -87,7 +89,7 @@ h1 {
   cursor: pointer;
 }
 button:active {
-  background: #e5e5e5;
+  background: #ffffff;
   -webkit-box-shadow: inset 0px 0px 588px #c1c1c1;
   -moz-box-shadow: inset 0px 0px 588px #c1c1c1;
   box-shadow: inset 0px 0px 588px #c1c1c1;

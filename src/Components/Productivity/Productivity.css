@@ -23,7 +23,7 @@
 }
 
 .todo-section {
-  margin-top: 10vh;
+  margin-top: 8vh;
   margin-right: 2vh;
   margin-left: 2vh;
 }
@@ -33,7 +33,7 @@
 
   font-family: 'Raleway', sans-serif;
   padding: none;
-  font-size: 3vh;
+  font-size: 2.5vh;
   background: -webkit-linear-gradient(rgb(147, 201, 237), rgb(234, 123, 207));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;

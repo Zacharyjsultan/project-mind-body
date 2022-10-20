@@ -2,7 +2,6 @@ import { useState } from 'react';
 import { NavLink, useParams } from 'react-router-dom';
 import { authUser } from '../../services/auth';
 import { useUser } from '../../context/UserContext';
-import Header from '../Header/Header';
 import './Auth.css';
 import { Button, TextField } from '@mui/material';
 import { createProfile } from '../../services/profiles';

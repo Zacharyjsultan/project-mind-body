@@ -1,3 +1,9 @@
+@keyframes blinker {
+  10% {
+    opacity: 0;
+  }
+}
+
 .creators-container {
   display: flex;
   flex-wrap: wrap;
@@ -5,6 +11,8 @@
   align-items: center;
   margin: 5em;
   background-image: url('TODOS.png');
+  background-repeat: repeat-y;
+  background-size: cover;
   border-radius: 3em;
   border: 1em solid black;
 }
@@ -12,15 +20,17 @@
 .creators {
   justify-content: center;
   display: flex;
+  animation: blinker 2s linear;
   align-items: center;
   color: rgb(0, 0, 0);
-  margin: 6em;
-  padding: 7em;
+  margin: 8em;
+  padding: 6em;
+  margin-bottom: 10px;
 }
 
 .image {
   width: 10vw;
-  margin: auto;
+  margin: 3em;
   margin-top: 1.3343523432em;
   box-shadow: -11px 10px 5px -7px rgba(0, 0, 0, 0.36);
   -webkit-box-shadow: -11px 10px 5px -7px rgba(0, 0, 0, 0.36);
@@ -29,4 +39,60 @@
 
 .social-icon-link {
   color: blue;
+  background-color: rgb(191, 212, 253);
+  padding-bottom: 0.3vh;
+}
+
+.names {
+  font-size: 2em;
+  background-color: rgb(5, 5, 5);
+  color: whitesmoke;
+  margin-bottom: 1vh;
+  box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.39);
+  -webkit-box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.39);
+  -moz-box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.39);
+}
+
+.linkedin {
+  height: 30px;
+  background-color: aliceblue;
+  padding: 5px;
+  border: black solid 2px;
+  box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.39);
+  -webkit-box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.39);
+  -moz-box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.39);
+}
+
+.github {
+  height: 30px;
+  background-color: aliceblue;
+  border: black solid 1.3px;
+  box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.39);
+  -webkit-box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.39);
+  -moz-box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.39);
+}
+
+.andrew {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.kyle {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.charlie {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.zach {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }

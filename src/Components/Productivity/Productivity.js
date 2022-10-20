@@ -68,7 +68,7 @@ export default function Productivity() {
       </div> */}
       <div className="signout">
         <img src={require('./logout.png')} className="logout-icon" />
-        <Button variant="outlined" className="signout-btn" onClick={handleLogout}>
+        <Button variant="contained" className="signout-btn" onClick={handleLogout}>
           Signout
         </Button>
       </div>

@@ -15,7 +15,7 @@ export default function Mind() {
       <div className="meditation-path">
         <div className="med-image-container">
           <NavLink className="mind-links" to="/meditation">
-            <h4 className="mind-nav meditate-h4">Click to meditate</h4>
+            <h4 className="mind-nav meditate-h4">Take a Break</h4>
             <img className="meditation-img" src={require('./meditation.png')} />
           </NavLink>
         </div>

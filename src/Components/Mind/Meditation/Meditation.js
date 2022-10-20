@@ -1,9 +1,9 @@
 import { Button } from '@mui/material';
-import { clear } from '@testing-library/user-event/dist/clear';
 import React, { useContext, useState, useRef, useEffect } from 'react';
 import { NavLink, Redirect } from 'react-router-dom';
 import { UserContext } from '../../../context/UserContext';
 import './Meditation.css';
+import Timer from './Timer';
 
 export default function Meditation() {
   const { user } = useContext(UserContext);
@@ -11,112 +11,113 @@ export default function Meditation() {
   if (!user) {
     return <Redirect to="/auth/sign-in" />;
   }
-  const Timer = () => {
-    const Ref = useRef(null);
-  
-    const [timer, setTimer] = useState('00:00:00');
-  
-    const getTimeRemaining = (e) => {
-      const total = Date.parse(e) - Date.parse(new Date());
-      const seconds = Math.floor((total / 1000) % 60);
-      const minutes = Math.floor((total / 1000 / 60) % 60);
-      const hours = Math.floor((total / 1000 / 60 / 60) % 24);
-      return {
-        total, hours, minutes, seconds
-      };
-    };
-  
-    const startTimer = (e) => {
-      let { total, hours, minutes, seconds } = getTimeRemaining(e);
-      if (total >= 0) {
-        setTimer(
-          (hours > 9 ? hours : '0' + hours) + ':' +
-          (minutes > 9 ? minutes : '0' + minutes) + ';'
-          + (seconds > 9 ? seconds : '0' + seconds)
-        );
-      }  
-    };
-  
-    const clearTimer = (e) => {
-      setTimer('00:00:10');
-  
-      if (Ref.current) clearInterval(Ref.current);
-      const id = setInterval(() => {
-        startTimer(e);
-      }, 1000);
-      Ref.current = id;
-    };
-  
-    const getDeadTime = () => {
-      let deadline = new Date();
-      deadline.setSeconds(deadline.getSeconds() + 10);
-      return deadline;
-    };
-  
-    useEffect(() => {
-      clearTimer(getDeadTime());
-    }, []);
-  
-    const onClickReset = () => {
-      clearTimer(getDeadTime());
-    };
-    return (
-      <div className="meditation-body">
-        <div className="grid-top">
-          <NavLink to="/home/mind" className="med-navlink">
-            <Button variant="outlined" className="back-button">
-            Done meditating
-            </Button>
-          </NavLink>
-        </div>
-        <div className='timer'>
-          <h2>{timer}</h2>
-          <button onClick={onClickReset}>Reset</button>
-        </div>
 
-        <ul>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-        </ul>
+  // const Timer = () => {
+  //   const Ref = useRef(null);
+  
+  //   const [timer, setTimer] = useState('00:00:00');
+  
+  //   const getTimeRemaining = (e) => {
+  //     const total = Date.parse(e) - Date.parse(new Date());
+  //     const seconds = Math.floor((total / 1000) % 60);
+  //     const minutes = Math.floor((total / 1000 / 60) % 60);
+  //     const hours = Math.floor((total / 1000 / 60 / 60) % 24);
+  //     return {
+  //       total, hours, minutes, seconds
+  //     };
+  //   };
+  
+  //   const startTimer = (e) => {
+  //     let { total, hours, minutes, seconds } = getTimeRemaining(e);
+  //     if (total >= 0) {
+  //       setTimer(
+  //         (hours > 9 ? hours : '0' + hours) + ':' +
+  //         (minutes > 9 ? minutes : '0' + minutes) + ';'
+  //         + (seconds > 9 ? seconds : '0' + seconds)
+  //       );
+  //     }  
+  //   };
+  
+  //   const clearTimer = (e) => {
+  //     setTimer('00:00:10');
+  
+  //     if (Ref.current) clearInterval(Ref.current);
+  //     const id = setInterval(() => {
+  //       startTimer(e);
+  //     }, 1000);
+  //     Ref.current = id;
+  //   };
+  
+  //   const getDeadTime = () => {
+  //     let deadline = new Date();
+  //     deadline.setSeconds(deadline.getSeconds() + 10);
+  //     return deadline;
+  //   };
+  
+  //   useEffect(() => {
+  //     clearTimer(getDeadTime());
+  //   }, []);
+  
+  //   const onClickReset = () => {
+  //     clearTimer(getDeadTime());
+  //   };
+
+  return (
+    <div className="meditation-body">
+      <div className="grid-top">
+        <NavLink to="/home/mind" className="med-navlink">
+          <Button variant="outlined" className="back-button">
+            Done meditating
+          </Button>
+        </NavLink>
       </div>
-    );
-  };
+      <div className='timer'>
+        <Timer />
+        {/* <button onClick={onClickReset}>Reset</button> */}
+      </div>
+
+      <ul>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+      </ul>
+    </div>
+  );
 }

@@ -37,6 +37,7 @@ h1 {
   margin-left: 10vh;
   min-width: 875px;
   min-height: 695px;
+  background-size: cover;
   border: #0ea800 3px solid;
   background-image: url('backgroundimg101.jpeg');
   display: grid;

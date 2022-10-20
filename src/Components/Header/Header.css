@@ -14,7 +14,7 @@ header {
   box-shadow: -1px 6px 5px 0px rgba(0, 0, 0, 0.6);
   -webkit-box-shadow: -1px 6px 5px 0px rgba(0, 0, 0, 0.6);
   -moz-box-shadow: -1px 6px 5px 0px rgba(0, 0, 0, 0.6);
-  text-shadow: 2px 2px 2px rgb(57, 91, 100);
+  /* text-shadow: 2px 2px 2px rgb(57, 91, 100); */
   border-bottom: 1px solid white;
 }
 
@@ -32,6 +32,9 @@ header {
   display: flex;
   flex-direction: column;
   margin-right: 6vw;
+  background: -webkit-linear-gradient(rgb(245, 245, 245), rgb(10, 78, 160));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .desk {
@@ -49,7 +52,7 @@ header {
 .home-link {
   text-decoration: none;
   color: rgb(223, 246, 255);
-  text-shadow: 2px 2px 2px rgb(111, 154, 165);
+  /* text-shadow: 2px 2px 2px rgb(111, 154, 165); */
 }
 
 .desk-icon {

@@ -34,6 +34,9 @@
   font-family: 'Raleway', sans-serif;
   padding: none;
   font-size: 3vh;
+  background: -webkit-linear-gradient(rgb(147, 201, 237), rgb(234, 123, 207));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .signout {

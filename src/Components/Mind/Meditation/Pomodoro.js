@@ -9,6 +9,7 @@ export default function Pomodoro() {
   const [minutes, setMinutes] = useState(5);
   const [seconds, setSeconds] = useState(0);
   const [displayMessage, setDisplayMessage] = useState(false);
+
   const handleTime = (event) => {
     setMinutes(event.target.value);
   };
@@ -40,17 +41,16 @@ export default function Pomodoro() {
 
   return (
     <div>
-      <Select
-        labelId="demo-simple-select-label"
-        id="demo-simple-select"
+      <select
         value={minutes}
-        label="time"
-        onChange={(e) => handleTime(e.target.value)}
+        onChange={(e) => {
+          setMinutes(e.target.value);
+        }}
       >
-        <MenuItem value={5}>Five</MenuItem>
-        <MenuItem value={10}>Ten</MenuItem>
-        <MenuItem value={20}>Twenty</MenuItem>
-      </Select>
+        <option value={5}>Five</option>
+        <option value={10}>Ten</option>
+        <option value={20}>Twenty</option>
+      </select>
       <div className="pomodoro">
         <div className="message">
           {displayMessage && <div>Break time! New session starts in:</div>}

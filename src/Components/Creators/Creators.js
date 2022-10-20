@@ -7,9 +7,9 @@ export default function Creators() {
     <div>
       <div className="creators-container">
         <div className="creators">
-          <p className="andrew">
+          <div className="andrew">
             <img className="image" src={require('./andrew.jpg')} />
-            <p>Andrew</p>
+            <div className="names">Andrew</div>
             <Link
               className="social-icon-link github"
               to={{ pathname: 'https://github.com/andrewjamesboyle' }}
@@ -29,10 +29,10 @@ export default function Creators() {
               <i className="fab fa-github" />
               LinkedIn
             </Link>
-          </p>
-          <p className="zach">
+          </div>
+          <div className="zach">
             <img className="image" src={require('./zatchery.JPG')} />
-            <p>Zach</p>
+            <div className="names">Zach</div>
             <Link
               className="social-icon-link github"
               to={{ pathname: 'https://github.com/Zacharyjsultan' }}
@@ -52,10 +52,10 @@ export default function Creators() {
               <i className="fab fa-github" />
               LinkedIn
             </Link>
-          </p>
-          <p className="charlie">
+          </div>
+          <div className="charlie">
             <img className="image" src={require('./charlie.png')} />
-            <p>Charlie</p>
+            <div className="names">Charlie</div>
             <Link
               className="social-icon-link github"
               to={{ pathname: 'https://github.com/charlescrabtree' }}
@@ -75,10 +75,10 @@ export default function Creators() {
               <i className="fab fa-github" />
               LinkedIn
             </Link>
-          </p>
-          <p className="kyle">
+          </div>
+          <div className="kyle">
             <img className="image" src={require('./me.jpeg')} />
-            <p> Kyle</p>
+            <div className="names"> Kyle</div>
             <Link
               className="social-icon-link github"
               to={{ pathname: 'https://github.com/kyle-j-mccall' }}
@@ -98,7 +98,7 @@ export default function Creators() {
               <i className="fab fa-github" />
               LinkedIn
             </Link>
-          </p>
+          </div>
         </div>
       </div>
     </div>

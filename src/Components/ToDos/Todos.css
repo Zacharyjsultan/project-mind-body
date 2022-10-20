@@ -4,7 +4,8 @@
   justify-content: center;
   align-items: center;
   margin-top: 5vh;
-  font-family: 'Libre Baskerville', serif;
+  /* font-family: 'Libre Baskerville', serif; */
+  font-family: 'Raleway', sans-serif;
 }
 .todo-input {
   display: flex;
@@ -12,17 +13,16 @@
   justify-content: center;
   align-items: center;
   gap: 2vh;
-  
 }
 
 #outlined-basic {
-  color: #B1AA9A;
+  color: #b1aa9a;
 }
 
 .todo-main {
   gap: 5vh;
-  font-family: 'Libre Baskerville', serif;
-
+  /* font-family: 'Libre Baskerville', serif; */
+  font-family: 'Raleway', sans-serif;
 }
 .add-todo-btn {
   background-color: antiquewhite;

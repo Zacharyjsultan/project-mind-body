@@ -1,6 +1,7 @@
 .productivity-main {
   background-color: rgb(57, 91, 100);
   color: rgb(231, 246, 242);
+  border-right: 1px solid white;
   width: 12vw;
   height: 100vh;
   margin-bottom: 10vh;
@@ -23,14 +24,16 @@
 
 .todo-section {
   margin-top: 10vh;
+  margin-right: 2vh;
+  margin-left: 2vh;
 }
 
 .greeting {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-family: 'Libre Baskerville', serif;
-  margin-top: 4vh;
+  display: grid;
+
+  font-family: 'Raleway', sans-serif;
+  padding: none;
+  font-size: 3vh;
 }
 
 .signout {
@@ -44,4 +47,19 @@
 
 .logout-icon {
   height: 2vh;
+}
+
+.hello {
+  display: flex;
+  margin-bottom: none;
+  justify-content: center;
+}
+
+.hello p {
+  margin-top: 4vh;
+}
+
+.name-productivity {
+  display: flex;
+  justify-content: center;
 }

@@ -44,9 +44,7 @@ export default function Pomodoro() {
         <option value={20}>Twenty</option>
       </select>
       <div className="pomodoro">
-        <div className="message">
-          {displayMessage && <div>Break time! New session starts in:</div>}
-        </div>
+        <div className="message">{displayMessage && <div>New meditation starts in:</div>}</div>
         <div className="timer">
           {timerMinutes}:{timerSeconds}
         </div>

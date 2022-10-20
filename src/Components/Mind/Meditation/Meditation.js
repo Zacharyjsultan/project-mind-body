@@ -1,5 +1,5 @@
 import { Button } from '@mui/material';
-import React, { useContext, useState, useRef, useEffect } from 'react';
+import React, { useContext } from 'react';
 import { NavLink, Redirect } from 'react-router-dom';
 import { UserContext } from '../../../context/UserContext';
 import './Meditation.css';

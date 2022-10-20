@@ -1,31 +1,71 @@
 import React, { useEffect, useState } from 'react';
 import './Timer.css';
 
-export default function Timer() {
-  const [days, setDays] = useState(0);
-  const [hours, setHours] = useState(0);
-  const [minutes, setMinutes] = useState(0);
+// export default function Timer() {
+
+//   const [minutes, setMinutes] = useState(0);
+//   const [seconds, setSeconds] = useState(0);
+
+
+//   const deadline = Date.now() + 5;
+//   deadline.toString();
+
+//   const getTime = () => {
+//     const time = Date.parse(deadline.toString()) - Date.now();
+
+//     setMinutes(Math.floor((time / (1000 / 60) % 60)));
+//     setSeconds(Math.floor((time / (1000) % 60)));
+//   };
+
+//   useEffect(() => {
+//     const interval = setInterval(() => getTime(deadline), 1000);
+
+//     return () => clearInterval(interval);
+//   }, []);
+
+//   return (
+//     <div className="timer">{minutes}: {seconds}</div>
+//   );
+// }
+
+export default function Pomodoro() {
+  const [minutes, setMinutes] = useState(25);
   const [seconds, setSeconds] = useState(0);
-
-
-  const deadline = 'October, 31, 2022';
-
-  const getTime = () => {
-    const time = Date.parse(deadline) - Date.now();
-
-    setDays(Math.floor(time / (1000 * 60 * 60 * 24)));
-    setHours(Math.floor((time / (1000 * 60 * 60)) % 24));
-    setMinutes(Math.floor((time / (1000 / 60) % 60)));
-    setSeconds(Math.floor((time / (1000) % 60)));
-  };
+  const [displayMessage, setDisplayMessage] = useState(false);
 
   useEffect(() => {
-    const interval = setInterval(() => getTime(deadline), 1000);
+    let interval = setInterval(() => {
+      clearInterval(interval);
 
-    return () => clearInterval(interval);
-  }, []);
+      if (seconds === 0) {
+        if (minutes !== 0) {
+          setSeconds(59);
+          setMinutes(minutes - 1);
+        } else {
+          let minutes = displayMessage ? 24 : 4;
+          let seconds = 59;
+
+          setSeconds(seconds);
+          setMinutes(minutes);
+          setDisplayMessage(!displayMessage);
+        }
+      } else {
+        setSeconds(seconds - 1);
+      }
+    }, 1000);
+  }, [seconds]);
+
+  const timerMinutes = minutes < 10 ? `0${minutes}` : minutes;
+  const timerSeconds = seconds < 10 ? `0${seconds}` : seconds;
 
   return (
-    <div className="timer">{days}: {hours}: {minutes}: {seconds}</div>
+    <div className="pomodoro">
+      <div className="message">
+        {displayMessage && <div>Break time! New session starts in:</div>}
+      </div>
+      <div className="timer">
+        {timerMinutes}:{timerSeconds}
+      </div>
+    </div>
   );
 }

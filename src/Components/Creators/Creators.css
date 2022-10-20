@@ -23,8 +23,9 @@
   animation: blinker 2s linear;
   align-items: center;
   color: rgb(0, 0, 0);
-  margin: 6em;
-  padding: 7em;
+  margin: 8em;
+  padding: 6em;
+  margin-bottom: 10px;
 }
 
 .image {
@@ -47,17 +48,28 @@
   background-color: rgb(5, 5, 5);
   color: whitesmoke;
   margin-bottom: 1vh;
+  box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.39);
+  -webkit-box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.39);
+  -moz-box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.39);
 }
 
 .linkedin {
   height: 30px;
   background-color: aliceblue;
   padding: 5px;
+  border: black solid 2px;
+  box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.39);
+  -webkit-box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.39);
+  -moz-box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.39);
 }
 
 .github {
   height: 30px;
   background-color: aliceblue;
+  border: black solid 1.3px;
+  box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.39);
+  -webkit-box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.39);
+  -moz-box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.39);
 }
 
 .andrew {

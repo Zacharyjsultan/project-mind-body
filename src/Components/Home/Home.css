@@ -1,23 +1,24 @@
 .home-main {
-  background-color: rgb(165, 201, 202);
-  font-family: 'Libre Baskerville', serif;
-
+  background-image: url('./polygon-mountain.jpg');
+  font-family: 'Raleway', sans-serif;
+  color: rgb(223, 246, 255);
   width: 100vw;
   height: 100vh;
-  background: url('https://unsplash.it/1920/1024?image=684');
   background-size: cover;
-  background-position: center top;
-  background-repeat: no-repeat;
-  -webkit-animation-name: moveBG;
-  animation-name: moveBG;
-  -webkit-animation-iteration-count: infinite;
-  animation-iteration-count: infinite;
-  -webkit-animation-direction: alternate;
-  animation-direction: alternate;
-  -webkit-animation-timing-function: linear;
-  animation-timing-function: linear;
-  -webkit-animation-duration: 30s;
-  animation-duration: 30s;
+  background-position: center;
+  overflow-x: hidden;
+  overflow-y: hidden;
+}
+
+.home-flex {
+  font-size: 3vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 92vh;
+  margin-left: 8vw;
+  margin-bottom: 2vh;
 }
 
 a {
@@ -31,20 +32,52 @@ a {
   margin-left: 12vw;
 }
 
-/* @-webkit-keyframes moveBG {
-  0% {
-    transform: translateX(0);
-  }
-  100% {
-    transform: translateX(-20vw);
-  }
+.slogan {
+  animation: textAnim 2s ease 0s 1 normal forwards;
 }
 
-@keyframes moveBG {
+@keyframes textAnim {
   0% {
-    transform: translateX(0);
+    animation-timing-function: ease-in;
+    opacity: 1;
+    transform: translateY(-45px);
   }
+
+  24% {
+    opacity: 1;
+  }
+
+  40% {
+    animation-timing-function: ease-in;
+    transform: translateY(-24px);
+  }
+
+  65% {
+    animation-timing-function: ease-in;
+    transform: translateY(-12px);
+  }
+
+  82% {
+    animation-timing-function: ease-in;
+    transform: translateY(-6px);
+  }
+
+  93% {
+    animation-timing-function: ease-in;
+    transform: translateY(-4px);
+  }
+
+  25%,
+  55%,
+  75%,
+  87% {
+    animation-timing-function: ease-out;
+    transform: translateY(0px);
+  }
+
   100% {
-    transform: translateX(-20vw);
+    animation-timing-function: ease-out;
+    opacity: 1;
+    transform: translateY(0px);
   }
-} */
+}

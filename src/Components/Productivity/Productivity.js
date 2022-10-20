@@ -36,7 +36,12 @@ export default function Productivity() {
   return (
     <div className="productivity-main">
       <div className="greeting">
-        <div>Hello {profile.full_name}</div>
+        <div className="hello">
+          <p>Hello</p>
+        </div>
+        <div className="name-productivity">
+          <p>{profile.full_name}</p>
+        </div>
       </div>
       <div className="todo-section">
         <Todos

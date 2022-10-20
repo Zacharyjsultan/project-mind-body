@@ -33,6 +33,20 @@ export default function Home() {
       <Header />
       <Productivity />
 
+      <div className="home-flex">
+        <h2 className="slogan">Your productivity hub.</h2>
+        <div className="video-container">
+          <video
+            src={require('./code-hands.mp4')}
+            width="1000"
+            height="500"
+            // controls="controls"
+            autoPlay={true}
+            loop
+          />
+        </div>
+      </div>
+
       <div className="home-components">
         <Switch>
           {/* <Route exact path="/home" component={Landing} /> */}
@@ -42,7 +56,6 @@ export default function Home() {
 
           <Route path="/home/journal/list" component={JournalList} />
           <Route path="/home/journal" component={Journal} />
-
         </Switch>
       </div>
     </div>

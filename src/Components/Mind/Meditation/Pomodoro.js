@@ -32,8 +32,11 @@ export default function Pomodoro() {
   const timerSeconds = seconds < 10 ? `0${seconds}` : seconds;
 
   return (
+
+ 
     <div className="pom-body">
-      <select
+      {minutes === 0 && <select
+
         value={minutes}
         onChange={(e) => {
           setMinutes(e.target.value);
@@ -42,7 +45,7 @@ export default function Pomodoro() {
         <option value={5}>Five</option>
         <option value={10}>Ten</option>
         <option value={20}>Twenty</option>
-      </select>
+      </select>}
       <div className="pomodoro">
         <div className="message">{displayMessage && <div>New meditation starts in:</div>}</div>
         <div className="timer">

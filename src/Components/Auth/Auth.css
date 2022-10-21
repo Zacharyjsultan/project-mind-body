@@ -7,6 +7,7 @@
   padding-right: 3vh;
   padding-top: 2vh;
   padding-bottom: 2vh;
+
   font-family: 'Libre Baskerville', serif;
   background-color: rgb(223, 246, 255);
   box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.52);
@@ -18,6 +19,20 @@
   text-decoration: none;
 }
 
+.auth-h2 {
+  font-family: 'Raleway', sans-serif;
+  bottom: 80vh;
+  font-size: 4vh;
+  background: -webkit-linear-gradient(rgb(224, 222, 235), rgb(14, 110, 227));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.create-profile {
+  font-family: 'Raleway', sans-serif;
+  color: black;
+}
+
 .auth-button {
   margin: 1vh;
 }
@@ -27,6 +42,7 @@
   background-size: cover;
   height: 100vh;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
 }

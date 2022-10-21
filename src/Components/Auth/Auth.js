@@ -45,7 +45,9 @@ export default function Auth() {
     return (
       <div className="auth-body">
         <div className="auth-main">
+          <h2 className="auth-h2">Desk Jockey</h2>
           <div className="input-container">
+            <h2 className="create-profile">Create Profile</h2>
             <div className="input-form">
               <div className="email-container">
                 <TextField
@@ -75,7 +77,7 @@ export default function Auth() {
                 type="button"
                 onClick={handleProfile}
               >
-                Create Profile
+                Submit
               </Button>
             </div>
           </div>
@@ -87,6 +89,7 @@ export default function Auth() {
   return (
     <div className="auth-body">
       <div className="auth-main">
+        <h2 className="auth-h2">Desk Jockey</h2>
         <div className="input-container">
           <div className="auth-nav">
             <NavLink to="/auth/sign-in" className="auth-link">
@@ -125,14 +128,26 @@ export default function Auth() {
           </div>
 
           <div className="submit-button">
-            <Button
-              variant="contained"
-              className="auth-button"
-              type="button"
-              onClick={clickHandler}
-            >
-              Submit
-            </Button>
+            {type === 'sign-up' && (
+              <Button
+                variant="contained"
+                className="auth-button"
+                type="button"
+                onClick={clickHandler}
+              >
+                Sign up
+              </Button>
+            )}
+            {type === 'sign-in' && (
+              <Button
+                variant="contained"
+                className="auth-button"
+                type="button"
+                onClick={clickHandler}
+              >
+                Sign in
+              </Button>
+            )}
           </div>
         </div>
       </div>

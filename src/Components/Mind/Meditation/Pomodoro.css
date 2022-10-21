@@ -8,8 +8,8 @@
   margin-bottom: 0.5em;
 }
 
-body {
-  background-color: #1e212d;
+.pom-body {
+  background-color: black;
   color: #ffffff94;
   height: 100vh;
   font-family: 'Roboto Mono', monospace;

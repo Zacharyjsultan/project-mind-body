@@ -32,7 +32,7 @@ export default function Pomodoro() {
   const timerSeconds = seconds < 10 ? `0${seconds}` : seconds;
 
   return (
-    <div>
+    <div className="pom-body">
       <select
         value={minutes}
         onChange={(e) => {
